@@ -16,7 +16,7 @@ public class OuvrirFenetre extends RequeteCOR {
 		String[] donnees = instruction.split("/");
 		if (donnees[0].equals("ouvrirfenetre") && donnees.length == 7) {
 
-			Frame fen = new Frame(donnees[1]);
+			Frame fen = new Frame(donnees[2]);
 
 			int x = Integer.parseInt(donnees[3]);
 			int y = Integer.parseInt(donnees[4]);
@@ -29,7 +29,7 @@ public class OuvrirFenetre extends RequeteCOR {
 			fen.setResizable(false);
 
 			SingletonListFrame singletonListeFrame = SingletonListFrame.getInstance();
-			singletonListeFrame.getListFrame().add(new InfoFrame(noConnexion, donnees[2], fen));
+			singletonListeFrame.getListFrame().add(new InfoFrame(noConnexion, donnees[1], fen));
 
 			return true;
 		} else
