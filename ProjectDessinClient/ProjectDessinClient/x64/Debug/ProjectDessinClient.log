@@ -1,0 +1,11 @@
+﻿  Cercle.cpp
+  Client.cpp
+e:\cours\l3\s2\ppil\projetdessinppil\projectdessinclient\projectdessinclient\client.cpp(57): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  Erreur.cpp
+e:\cours\l3\s2\ppil\projetdessinppil\projectdessinclient\projectdessinclient\erreur.cpp(12): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+  FormeGeometriqueBase.cpp
+  FormeGeometriqueSimple.cpp
+  Main.cpp
+  Vecteur2D.cpp
+  Génération de code en cours...
+  ProjectDessinClient.vcxproj -> E:\cours\L3\S2\PPIL\ProjetDessinPPIL\ProjectDessinClient\x64\Debug\ProjectDessinClient.exe
