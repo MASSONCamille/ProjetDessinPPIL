@@ -1,7 +1,7 @@
 #pragma once
 class FormeGeometriqueBase
 {
-protected:
+public:
 	enum Couleurs {
 		BLACK = 0,
 		BLUE = 1,
@@ -11,6 +11,18 @@ protected:
 		CYAN = 5
 	};
 
+	virtual ~FormeGeometriqueBase();
+
+	inline Couleurs getColor() const
+	{
+		return this->_color;
+	}
+	inline void setColor(const Couleurs c)
+	{
+		this->_color = c;
+	}
+
+protected:
 	Couleurs _color;
 
 	inline FormeGeometriqueBase()
@@ -26,19 +38,6 @@ protected:
 	virtual int Traslation() const;
 	virtual int Homothetie() const;
 	virtual int Rotation() const;
-
-public:
-	virtual ~FormeGeometriqueBase();
-
-	inline Couleurs getColor() const
-	{
-		return this->_color;
-	}
-	inline void setColor(const Couleurs c)
-	{
-		this->_color = c;
-	}
-
 
 };
 

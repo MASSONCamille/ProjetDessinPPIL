@@ -1,9 +1,9 @@
 ﻿  Cercle.cpp
+  Client.cpp
+  Erreur.cpp
   FormeGeometriqueBase.cpp
   FormeGeometriqueSimple.cpp
   Main.cpp
-e:\cours\l3\s2\ppil\projetppil\projectdessinclient\projectdessinclient\main.cpp(7): error C2248: 'FormeGeometriqueBase::BLACK' : impossible d'accéder à protected énumérateur déclaré(e) dans la classe 'FormeGeometriqueBase'
-  e:\cours\l3\s2\ppil\projetppil\projectdessinclient\projectdessinclient\formegeometriquebase.h(6): note: voir la déclaration de 'FormeGeometriqueBase::BLACK'
-  e:\cours\l3\s2\ppil\projetppil\projectdessinclient\projectdessinclient\formegeometriquebase.h(2): note: voir la déclaration de 'FormeGeometriqueBase'
   Vecteur2D.cpp
   Génération de code en cours...
+  ProjectDessinClient.vcxproj -> E:\cours\L3\S2\PPIL\ProjetDessinPPIL\ProjectDessinClient\Debug\ProjectDessinClient.exe
