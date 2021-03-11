@@ -43,7 +43,6 @@ Client::~Client()
 				throw Erreur("Erreur close socket");
 
 			WSACleanup();
-			cout << "Fermeture de la connection serveur" << endl;
 
 		}catch (Erreur erreur) {
 			cerr << erreur << endl;
@@ -54,10 +53,12 @@ Client::~Client()
 void Client::rqtServ(string rqt)
 {
 	try {
-		if (send(this->sock, rqt.c_str(), rqt.size(), 0) == SOCKET_ERROR)
+		cout << "rqt = " << endl << rqt << endl;
+		string requete = rqt + "\r\n";
+		if (send(this->sock, requete.c_str(), requete.size(), 0) == SOCKET_ERROR)
 			throw Erreur("Erreur d'envoi");
-		else
-			cout << "Envoi reussi" << endl;
+
+			cout << "Envoi reussi" << endl << endl;
 	}
 	catch (Erreur erreur) {
 		cerr << erreur << endl;

@@ -16,10 +16,12 @@ public class DessinRond extends RequeteCOR {
 	protected boolean actionHandlerBis(String instruction, int noConnexion) {
 		String[] donnees = instruction.split("/");
 		if (donnees[0].equals("rond") && donnees.length == 5) {
+			
 			Frame fen = SingletonListFrame.getInstance().getFrame(noConnexion, donnees[1]);
-
+			
 			int numBuffers = 2;
 			fen.createBufferStrategy(numBuffers);
+			
 			try {
 				Thread.sleep(150);
 			} catch (InterruptedException e) {

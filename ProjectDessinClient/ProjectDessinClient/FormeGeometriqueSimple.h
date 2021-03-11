@@ -18,13 +18,13 @@ protected:
 		this->_vecteurOrigine = v;
 	}
 
-	virtual int Dessiner() const;
-	virtual int Traslation() const;
-	virtual int Homothetie() const;
-	virtual int Rotation() const;
+	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const = 0;
+	virtual int Traslation();
+	virtual int Homothetie();
+	virtual int Rotation();
 
 public:
-	virtual ~FormeGeometriqueSimple();
+	virtual ~FormeGeometriqueSimple() {};
 
 	inline Vecteur2D getVec() const
 	{

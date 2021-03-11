@@ -13,7 +13,7 @@ public class EffacerDessins extends RequeteCOR {
 	@Override
 	protected boolean actionHandlerBis(String instruction, int noConnexion) {
 		String[] donnees = instruction.split("/");
-		if (donnees[0].equals("effacer") && donnees.length == 5) {
+		if (donnees[0].equals("effacer") && donnees.length == 2) {
 			Frame fen = SingletonListFrame.getInstance().getFrame(noConnexion, donnees[1]);
 
 			fen.removeAll(); // A voir

@@ -7,8 +7,6 @@ class Cercle : public FormeGeometriqueSimple
 private:
 	double _rayon;
 
-protected:
-
 public:
 	inline Cercle()
 		: FormeGeometriqueSimple()
@@ -16,7 +14,7 @@ public:
 		this->_rayon = 0;
 	}
 	inline Cercle(const Cercle & c)
-		: FormeGeometriqueSimple(c._color, c._vecteurOrigine)
+		: FormeGeometriqueSimple(c.getColor(), c._vecteurOrigine)
 	{
 		this->_rayon = c._rayon;
 	}
@@ -26,7 +24,7 @@ public:
 		this->_rayon = r;
 	}
 
-	virtual ~Cercle();
+	virtual ~Cercle() {};
 
 	inline double getRayon() const
 	{
@@ -37,10 +35,10 @@ public:
 		this->_rayon = r;
 	}
 
-	int Dessiner() const;
-	int Traslation() const;
-	int Homothetie() const;
-	int Rotation() const;
+	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const;
+	int Traslation();
+	int Homothetie();
+	int Rotation();
 
 	const Cercle & operator = (const Cercle &);
 };

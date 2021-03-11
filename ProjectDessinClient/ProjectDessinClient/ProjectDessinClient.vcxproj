@@ -129,19 +129,27 @@
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Croix.cpp" />
+    <ClCompile Include="DessinServJava.cpp" />
     <ClCompile Include="Erreur.cpp" />
+    <ClCompile Include="Fenetre.cpp" />
     <ClCompile Include="FormeGeometriqueBase.cpp" />
     <ClCompile Include="FormeGeometriqueSimple.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
+    <ClCompile Include="VisitorDessin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Croix.h" />
+    <ClInclude Include="DessinServJava.h" />
     <ClInclude Include="Erreur.h" />
+    <ClInclude Include="Fenetre.h" />
     <ClInclude Include="FormeGeometriqueBase.h" />
     <ClInclude Include="FormeGeometriqueSimple.h" />
     <ClInclude Include="Vecteur2D.h" />
+    <ClInclude Include="VisitorDessin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

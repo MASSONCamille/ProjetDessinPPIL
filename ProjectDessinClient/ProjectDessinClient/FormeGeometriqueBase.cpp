@@ -1,23 +1,15 @@
 #include "FormeGeometriqueBase.h"
 
 
-FormeGeometriqueBase::~FormeGeometriqueBase()
-{
-}
-
-int FormeGeometriqueBase::Dessiner() const
+int FormeGeometriqueBase::Traslation()
 {
 	return 0;
 }
-int FormeGeometriqueBase::Traslation() const
+int FormeGeometriqueBase::Homothetie()
 {
 	return 0;
 }
-int FormeGeometriqueBase::Homothetie() const
-{
-	return 0;
-}
-int FormeGeometriqueBase::Rotation() const
+int FormeGeometriqueBase::Rotation()
 {
 	return 0;
 }

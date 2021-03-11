@@ -1,24 +1,16 @@
 #include "FormeGeometriqueSimple.h"
 
 
-FormeGeometriqueSimple::~FormeGeometriqueSimple()
+int FormeGeometriqueSimple::Traslation()
 {
+	return 1;
 }
-
-int FormeGeometriqueSimple::Dessiner() const
+int FormeGeometriqueSimple::Homothetie()
 {
-	return 0;
+	return 1;
 }
-int FormeGeometriqueSimple::Traslation() const
+int FormeGeometriqueSimple::Rotation()
 {
-	return 0;
-}
-int FormeGeometriqueSimple::Homothetie() const
-{
-	return 0;
-}
-int FormeGeometriqueSimple::Rotation() const
-{
-	return 0;
+	return 1;
 }
 

@@ -1,4 +1,10 @@
 #pragma once
+
+#include "Fenetre.h"
+
+
+class VisitorDessin;
+
 class FormeGeometriqueBase
 {
 public:
@@ -11,7 +17,12 @@ public:
 		CYAN = 5
 	};
 
-	virtual ~FormeGeometriqueBase();
+	inline FormeGeometriqueBase()
+	{
+		this->_color = BLACK;
+	}
+
+	virtual ~FormeGeometriqueBase() {};
 
 	inline Couleurs getColor() const
 	{
@@ -22,22 +33,17 @@ public:
 		this->_color = c;
 	}
 
-protected:
-	Couleurs _color;
-
-	inline FormeGeometriqueBase()
-	{
-		this->_color = BLACK;
-	}
 	inline FormeGeometriqueBase(const Couleurs c)
 	{
 		this->_color = c;
 	}
 
-	virtual int Dessiner() const;
-	virtual int Traslation() const;
-	virtual int Homothetie() const;
-	virtual int Rotation() const;
+	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const = 0;
+	virtual int Traslation();
+	virtual int Homothetie();
+	virtual int Rotation();
 
+private:
+	Couleurs _color;
 };
 

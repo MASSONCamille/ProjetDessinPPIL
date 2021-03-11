@@ -1,31 +1,28 @@
 #include "Cercle.h"
+#include "VisitorDessin.h"
 
 
-Cercle::~Cercle()
+int Cercle::Dessiner(const Fenetre * f, const VisitorDessin * v) const
 {
+	return v->Dessiner(f, this);
 }
-
-int Cercle::Dessiner() const
+int Cercle::Traslation()
 {
-	return 0;
+	return 2;
 }
-int Cercle::Traslation() const
+int Cercle::Homothetie()
 {
-	return 0;
+	return 2;
 }
-int Cercle::Homothetie() const
+int Cercle::Rotation()
 {
-	return 0;
-}
-int Cercle::Rotation() const
-{
-	return 0;
+	return 2;
 }
 
 const Cercle & Cercle::operator=(const Cercle & c)
 {
 	if (this != &c) {
-		this->_color = c._color;
+		this->setColor(c.getColor());
 		this->_vecteurOrigine = c._vecteurOrigine;
 		this->_rayon = this->_rayon;
 	}
