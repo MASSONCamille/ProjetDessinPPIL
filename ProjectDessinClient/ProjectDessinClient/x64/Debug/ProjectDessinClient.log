@@ -1,9 +1,2 @@
-﻿  Cercle.cpp
-  Croix.cpp
-  DessinServJava.cpp
-  Fenetre.cpp
-  Main.cpp
-  VisitorDessin.cpp
-  Génération de code en cours...
-e:\cours\l3\s2\ppil\projetdessinppil\projectdessinclient\projectdessinclient\fenetre.cpp(14): warning C4715: 'Fenetre::Dessiner' : les chemins de contrôle ne retournent pas tous une valeur
+﻿  DessinServJava.cpp
   ProjectDessinClient.vcxproj -> E:\cours\L3\S2\PPIL\ProjetDessinPPIL\ProjectDessinClient\x64\Debug\ProjectDessinClient.exe

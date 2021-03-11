@@ -21,17 +21,33 @@ int DessinServJava::Dessiner(const Fenetre * f, const Croix * c) const
 		+ to_string(f->getNumFen()) + "/"
 		+ to_string((int)c->getVec().getX()) + "/"
 		+ to_string((int)c->getVec().getY()) + "/"
-		+ to_string((int)c->getDiagonale().getX()) + "/"
-		+ to_string((int)c->getDiagonale().getY());
+		+ to_string((int)(c->getDiagonale().getX() + c->getVec().getX())) + "/"
+		+ to_string((int)(c->getDiagonale().getY() + c->getVec().getY()));
 
 	Client::getInstance()->rqtServ(msg);
 
 	return 0;
 }
 
-int DessinServJava::Dessiner(const Fenetre * f) const
+int DessinServJava::Dessiner(const Fenetre * f, const Segment * s) const
 {
-	if (f->isDessiner()) return 1; //on ne peut pas dessiner 2X la meme fenetre
+	string msg = "segment/"; //"segment/$numfen/$x1/$y1/$x2/$y2"
+	msg = msg
+		+ to_string(f->getNumFen()) + "/"
+		+ to_string((int)s->getVec().getX()) + "/"
+		+ to_string((int)s->getVec().getY()) + "/"
+		+ to_string((int)(s->getPoint().getX() + s->getVec().getX())) + "/"
+		+ to_string((int)(s->getPoint().getY() + s->getVec().getY()));
+
+	Client::getInstance()->rqtServ(msg);
+
+	return 0;
+}
+
+
+int DessinServJava::Afficher(const Fenetre * f) const
+{
+	if (f->isAfficher()) return 1; //on ne peut pas dessiner 2X la meme fenetre
 
 	string msg = "ouvrirfenetre/"; //"ouvrirfenetre/$numfen/$titrefenetre/$x/$y/$width/$height"
 	msg = msg
@@ -54,10 +70,3 @@ int DessinServJava::Effacer(const Fenetre *f) const
 
 	return 0;
 }
-
-/**
--Ouvrir fenetre: "ouvrirfenetre/$numfen/$titrefenetre/$x/$y/$width/$height"
--Effacer fenetre: "effacer/$numfen"
--Dessin rond: "rond/$numfen/$x/$y/$rayon"
--Dessin croix: "croix/$numfen/$x1/$y1/$x2/$y2"
-*/

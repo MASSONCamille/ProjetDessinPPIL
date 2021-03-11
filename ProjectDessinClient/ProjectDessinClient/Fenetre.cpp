@@ -4,11 +4,11 @@
 int Fenetre::nbFen = 0;
 
 
-int Fenetre::Dessiner(VisitorDessin * v)
+int Fenetre::Afficher(VisitorDessin * v)
 {
-	int res = v->Dessiner(this);
+	int res = v->Afficher(this);
 	if (!res) {
-		this->_dessiner = true;
+		this->_afficher = true;
 		return res;
 	}
 }

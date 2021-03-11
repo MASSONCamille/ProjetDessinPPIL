@@ -8,15 +8,15 @@ int Cercle::Dessiner(const Fenetre * f, const VisitorDessin * v) const
 }
 int Cercle::Traslation()
 {
-	return 2;
+	return 0;
 }
 int Cercle::Homothetie()
 {
-	return 2;
+	return 0;
 }
 int Cercle::Rotation()
 {
-	return 2;
+	return 0;
 }
 
 const Cercle & Cercle::operator=(const Cercle & c)

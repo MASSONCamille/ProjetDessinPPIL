@@ -17,14 +17,14 @@ private:
 	string _nomFen;
 	int _x, _y;
 	int _width, _height;
-	bool _dessiner;
+	bool _afficher;
 
 public:
 	inline Fenetre() {
 		_numFen = nbFen;
 		nbFen++;
 
-		_dessiner = false;
+		_afficher = false;
 
 		_nomFen = "defaultName";
 		_x = _y = 0;
@@ -55,8 +55,8 @@ public:
 	inline int getHeight() const {
 		return _height;
 	}
-	inline bool isDessiner() const {
-		return _dessiner;
+	inline bool isAfficher() const {
+		return _afficher;
 	}
 
 
@@ -76,7 +76,7 @@ public:
 		_height = h;
 	}
 	
-	int Dessiner(VisitorDessin *);
+	int Afficher(VisitorDessin *);
 	int Effacer(VisitorDessin *);
 };
 
