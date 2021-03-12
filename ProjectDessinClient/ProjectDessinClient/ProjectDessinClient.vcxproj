@@ -89,6 +89,8 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS; _WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>
+      </CompileAsWinRT>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +121,8 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS; _WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>
+      </CompileAsWinRT>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +140,9 @@
     <ClCompile Include="FormeGeometriqueBase.cpp" />
     <ClCompile Include="FormeGeometriqueSimple.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Segment.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
     <ClCompile Include="VisitorDessin.cpp" />
   </ItemGroup>
@@ -149,7 +155,9 @@
     <ClInclude Include="Fenetre.h" />
     <ClInclude Include="FormeGeometriqueBase.h" />
     <ClInclude Include="FormeGeometriqueSimple.h" />
+    <ClInclude Include="Polygone.h" />
     <ClInclude Include="Segment.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="VisitorDessin.h" />
   </ItemGroup>

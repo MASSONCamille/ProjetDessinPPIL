@@ -11,6 +11,7 @@
 #include "VisitorDessin.h"
 #include "DessinServJava.h"
 
+
 int main() {
 	FormeGeometriqueBase * cercle1, * croix1, * segment1;
 	cercle1 = new Cercle(FormeGeometriqueBase::BLACK, Vecteur2D(100, 100), 50);
@@ -34,13 +35,12 @@ int main() {
 	if (segment1->Dessiner(f1, ServJava))
 		cout << "erreur segment" << endl << endl;
 
-	if (f1->Effacer(ServJava))
-		cout << "erreur effacer" << endl << endl;
+	//if (f1->Effacer(ServJava))
+		//cout << "erreur effacer" << endl << endl;
 
 	if (croix1->Dessiner(f1, ServJava))
 		cout << "erreur cercle" << endl << endl;
 
 	int x;
 	cin >> x;
-		// test client
 }

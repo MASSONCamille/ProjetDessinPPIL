@@ -11,6 +11,7 @@ int Fenetre::Afficher(VisitorDessin * v)
 		this->_afficher = true;
 		return res;
 	}
+	else return 1;
 }
 
 int Fenetre::Effacer(VisitorDessin * v)

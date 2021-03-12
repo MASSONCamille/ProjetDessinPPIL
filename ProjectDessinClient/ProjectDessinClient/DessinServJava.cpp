@@ -1,6 +1,6 @@
 #include "DessinServJava.h"
 
-int DessinServJava::Dessiner(const Fenetre * f, const Cercle * c) const
+int DessinServJava::Dessiner(const Fenetre *f, const Cercle *c) const
 {
 	string msg = "rond/"; //"rond/$numfen/$x/$y/$rayon"
 	msg = msg
@@ -14,7 +14,7 @@ int DessinServJava::Dessiner(const Fenetre * f, const Cercle * c) const
 	return 0;
 }
 
-int DessinServJava::Dessiner(const Fenetre * f, const Croix * c) const
+int DessinServJava::Dessiner(const Fenetre *f, const Croix *c) const
 {
 	string msg = "croix/"; //"croix/$numfen/$x1/$y1/$x2/$y2"
 	msg = msg
@@ -29,7 +29,7 @@ int DessinServJava::Dessiner(const Fenetre * f, const Croix * c) const
 	return 0;
 }
 
-int DessinServJava::Dessiner(const Fenetre * f, const Segment * s) const
+int DessinServJava::Dessiner(const Fenetre *f, const Segment *s) const
 {
 	string msg = "segment/"; //"segment/$numfen/$x1/$y1/$x2/$y2"
 	msg = msg
@@ -44,8 +44,42 @@ int DessinServJava::Dessiner(const Fenetre * f, const Segment * s) const
 	return 0;
 }
 
+int DessinServJava::Dessiner(const Fenetre *f, const Polygone *p) const {
+	/*
+	Segment *s1 = new Segment(t->getColor(), t->getVec(), t->getP2()),
+			*s2 = new Segment(t->getColor(), t->getVec(), t->getP3()),
+			*s3 = new Segment(t->getColor(), t->getVec() + t->getP2(),
+											 t->getVec() + t->getP3());
 
-int DessinServJava::Afficher(const Fenetre * f) const
+
+	
+
+
+
+	int res = s1->Dessiner(f, this) + // cummul des erreurs
+			  s2->Dessiner(f, this) +
+			  s3->Dessiner(f, this);
+
+	return res;
+	*/
+	return 0;
+}
+
+int DessinServJava::Dessiner(const Fenetre *f, const Triangle *t) const {
+	Segment *s1 = new Segment(t->getColor(), t->getVec(), t->getP2()),
+			*s2 = new Segment(t->getColor(), t->getVec(), t->getP3()),
+			*s3 = new Segment(t->getColor(), t->getVec() + t->getP2(),
+											 t->getVec() + t->getP3());
+	
+	int res = s1->Dessiner(f, this) + // cummul des erreurs
+		s2->Dessiner(f, this) +
+		s3->Dessiner(f, this);
+
+	return res;
+}
+
+
+int DessinServJava::Afficher(const Fenetre *f) const
 {
 	if (f->isAfficher()) return 1; //on ne peut pas dessiner 2X la meme fenetre
 
