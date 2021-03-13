@@ -16,9 +16,6 @@ public class DessinTriangle extends RequeteCOR {
 	@Override
 	protected boolean actionHandlerBis(String instruction, int noConnexion) {
 		String[] donnees = instruction.split("/");
-		System.out.println(donnees.length);
-		for (String mes : donnees)
-			System.out.println(mes);
 		if (donnees[0].equals("triangle") && donnees.length == 9) {
 			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
 
