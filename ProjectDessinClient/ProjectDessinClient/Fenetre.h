@@ -78,5 +78,6 @@ public:
 	
 	int Afficher(VisitorDessin *);
 	int Effacer(VisitorDessin *);
+	int Detruire(VisitorDessin *);
 };
 

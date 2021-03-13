@@ -53,7 +53,7 @@ Client::~Client()
 void Client::rqtServ(string rqt)
 {
 	try {
-		cout << "rqt = " << endl << rqt << endl;
+		cout << "rqt = " << rqt << endl;
 		string requete = rqt + "\r\n";
 		if (send(this->sock, requete.c_str(), requete.size(), 0) == SOCKET_ERROR)
 			throw Erreur("Erreur d'envoi");

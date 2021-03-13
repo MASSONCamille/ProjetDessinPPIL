@@ -11,19 +11,17 @@ int main() {
 
 
 	Vecteur2D v1, v2, v3;
-	v1 = Vecteur2D(0,1);
-	v2 = Vecteur2D(1,1);
-	v3 = Vecteur2D(1,0);
+	v1 = Vecteur2D(0,100);
+	v2 = Vecteur2D(100,100);
+	v3 = Vecteur2D(100,0);
 	vector<Vecteur2D> lstvec = { v1, v2, v3 };
-	Polygone *polygone1 = new Polygone(FormeGeometriqueBase::BLACK, Vecteur2D(1, 1), lstvec.size()+1);
+	Polygone *polygone1 = new Polygone(FormeGeometriqueBase::BLACK, Vecteur2D(100, 100), lstvec.size()+1);
 	polygone1->setListPoint(lstvec);
 
 	VisitorDessin * ServJava;
 	ServJava = new DessinServJava();
 	
 	Fenetre * f1 = new Fenetre();
-
-	//polygone1->Dessiner(f1, ServJava);
 	
 	if (f1->Afficher(ServJava))
 		cout << "fenetre deja dessiner" << endl << endl;
@@ -43,10 +41,8 @@ int main() {
 	//if (croix1->Dessiner(f1, ServJava))
 	//	cout << "erreur cercle" << endl << endl;
 
-	triangle1->Dessiner(f1, ServJava);
+	polygone1->Dessiner(f1, ServJava);
 
-	int x;
-	cin >> x;
-
-
+	int i;
+	cin >> i;
 }

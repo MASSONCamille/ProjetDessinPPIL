@@ -18,3 +18,8 @@ int Fenetre::Effacer(VisitorDessin * v)
 {
 	return v->Effacer(this);
 }
+
+int Fenetre::Detruire(VisitorDessin * v)
+{
+	return 0;
+}
