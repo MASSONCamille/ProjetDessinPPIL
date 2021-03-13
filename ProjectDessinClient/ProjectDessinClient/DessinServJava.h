@@ -14,5 +14,6 @@ class DessinServJava : public VisitorDessin
 
 	int Afficher(const Fenetre *) const;
 	int Effacer(const Fenetre *) const;
+	int Detruire(const Fenetre *) const;
 };
 

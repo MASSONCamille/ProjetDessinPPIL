@@ -114,3 +114,13 @@ int DessinServJava::Effacer(const Fenetre *f) const
 
 	return 0;
 }
+
+int DessinServJava::Detruire(const Fenetre *f) const
+{
+	string msg = "fermer/"; //"fermer/$numFrame"
+	msg = msg + to_string(f->getNumFen());
+
+	Client::getInstance()->rqtServ(msg);
+
+	return 0;
+}

@@ -21,5 +21,10 @@ int Fenetre::Effacer(VisitorDessin * v)
 
 int Fenetre::Detruire(VisitorDessin * v)
 {
-	return 0;
+	int res = v->Detruire(this);
+	if (!res) {
+		delete this;
+		return res;
+	}
+	else return 1;
 }

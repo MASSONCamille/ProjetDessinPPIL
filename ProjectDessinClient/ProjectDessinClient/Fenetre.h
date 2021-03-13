@@ -19,6 +19,8 @@ private:
 	int _width, _height;
 	bool _afficher;
 
+	virtual ~Fenetre() {};
+
 public:
 	inline Fenetre() {
 		_numFen = nbFen;
@@ -31,7 +33,6 @@ public:
 		_width = _height = 1000;
 	}
 
-	virtual ~Fenetre() {}; // TODO le destructeur doit appeler Fermer() (TODO)
 
 	inline int getNBFen() const {
 		return nbFen;

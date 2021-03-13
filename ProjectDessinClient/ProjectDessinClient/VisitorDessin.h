@@ -19,5 +19,6 @@ public:
 
 	virtual int Afficher(const Fenetre *) const = 0;
 	virtual int Effacer(const Fenetre *) const = 0;
+	virtual int Detruire(const Fenetre *) const = 0;
 };
 

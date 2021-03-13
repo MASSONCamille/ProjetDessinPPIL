@@ -41,8 +41,14 @@ int main() {
 	//if (croix1->Dessiner(f1, ServJava))
 	//	cout << "erreur cercle" << endl << endl;
 
-	polygone1->Dessiner(f1, ServJava);
+	//polygone1->Dessiner(f1, ServJava);
 
-	int i;
-	cin >> i;
+	f1->Detruire(ServJava);
+
+	if (f1) {
+		cout << "test" << endl;
+	}
+
+	int x;
+	cin >> x;
 }
