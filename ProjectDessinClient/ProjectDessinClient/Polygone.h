@@ -44,7 +44,7 @@ public:
 	{
 		return this->_listPoint;
 	}
-	inline void setDiagonale(vector<Vecteur2D> lp)
+	inline void setListPoint(vector<Vecteur2D> lp)
 	{
 		this->_listPoint = lp;
 	}

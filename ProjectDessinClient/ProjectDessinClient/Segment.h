@@ -5,7 +5,8 @@
 class Segment : public FormeGeometriqueSimple
 {
 private:
-	Vecteur2D _point;
+	Vecteur2D _point;	// vecteur qui donne la direction et longeur
+						// donc qui donne le point ou fini le segment
 
 public:
 	inline Segment()
@@ -13,10 +14,10 @@ public:
 	{
 		this->_point = Vecteur2D();
 	}
-	inline Segment(const Segment & c)
-		: FormeGeometriqueSimple(c.getColor(), c._vecteurOrigine)
+	inline Segment(const Segment & s)
+		: FormeGeometriqueSimple(s.getColor(), s._vecteurOrigine)
 	{
-		this->_point = c._point;
+		this->_point = s._point;
 	}
 	inline Segment(const Couleurs c, const Vecteur2D v, const Vecteur2D p)
 		: FormeGeometriqueSimple(c, v)

@@ -45,23 +45,25 @@ int DessinServJava::Dessiner(const Fenetre *f, const Segment *s) const
 }
 
 int DessinServJava::Dessiner(const Fenetre *f, const Polygone *p) const {
-	/*
-	Segment *s1 = new Segment(t->getColor(), t->getVec(), t->getP2()),
-			*s2 = new Segment(t->getColor(), t->getVec(), t->getP3()),
-			*s3 = new Segment(t->getColor(), t->getVec() + t->getP2(),
-											 t->getVec() + t->getP3());
 
+	vector<Vecteur2D> lstvect = p->getListPoint();
+	lstvect.insert(lstvect.begin(), Vecteur2D(0,0));
+	lstvect.insert(lstvect.end(), Vecteur2D(0,0));
 
-	
+	for (int i=1; i <= p->getNbPoint() ; i++) {
 
+		Vecteur2D vo, vp; // les 2 vecteurs du segment vo -> origin | vp -> point
+		vo = p->getVec() + lstvect[i-1];
+		vp = p->getVec() + lstvect[i] - vo;
 
+		Segment seg = Segment(p->getColor(), vo, vp);
 
-	int res = s1->Dessiner(f, this) + // cummul des erreurs
-			  s2->Dessiner(f, this) +
-			  s3->Dessiner(f, this);
+		cout << seg.getVec().getX() << "|" << seg.getVec().getY() << " --> ";
+		cout << seg.getPoint().getX() << "|" << seg.getPoint().getY() << endl;
 
-	return res;
-	*/
+		if(seg.Dessiner(f, this)) return 1; // tracer 
+	}
+
 	return 0;
 }
 
@@ -71,7 +73,7 @@ int DessinServJava::Dessiner(const Fenetre *f, const Triangle *t) const {
 			*s3 = new Segment(t->getColor(), t->getVec() + t->getP2(),
 											 t->getVec() + t->getP3());
 	
-	int res = s1->Dessiner(f, this) + // cummul des erreurs
+	int res = s1->Dessiner(f, this) +
 		s2->Dessiner(f, this) +
 		s3->Dessiner(f, this);
 
