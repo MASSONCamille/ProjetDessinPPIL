@@ -2,9 +2,9 @@
 
 ChargerCOR::ChargerCOR(ChargerCOR* suivant) : suivant(suivant) {}
 
-const char* ChargerCOR::charger(string nomFichier, string forme) const
+FormeGeometriqueBase* ChargerCOR::charger(string nomFichier, string forme) const
 {
-    const char* resultat;
+    FormeGeometriqueBase* resultat;
     resultat = this->charger1(nomFichier, forme);
 
     if (resultat != nullptr)

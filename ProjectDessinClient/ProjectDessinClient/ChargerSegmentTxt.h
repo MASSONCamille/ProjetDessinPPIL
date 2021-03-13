@@ -11,5 +11,5 @@ public:
 
 protected:
 
-	const char* charger1(string nomFichier, string forme) const;
+	FormeGeometriqueBase* charger1(string nomFichier, string forme) const;
 };

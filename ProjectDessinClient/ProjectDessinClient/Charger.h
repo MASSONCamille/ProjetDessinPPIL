@@ -1,5 +1,6 @@
 #pragma once
 
+#include "FormeGeometriqueBase.h"
 #include <string>
 
 using namespace std;
@@ -9,5 +10,5 @@ class Charger
 
 public:
 
-	virtual const char* charger(string nomFichier, string forme) const = 0;
+	virtual FormeGeometriqueBase* charger(string nomFichier, string forme) const = 0;
 };

@@ -10,10 +10,10 @@ public:
 protected:
 	ChargerCOR(ChargerCOR* suivant);
 
-	virtual const char* charger1(string nomFichier, string forme) const = 0;
+	virtual FormeGeometriqueBase* charger1(string nomFichier, string forme) const = 0;
 
 public:
 
-	const char* charger(string nomFichier, string forme) const;
+	FormeGeometriqueBase* charger(string nomFichier, string forme) const;
 
 };

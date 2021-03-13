@@ -1,6 +1,6 @@
 #pragma once
-#include "FormeGeometriqueSimple.h"
 
+#include "FormeGeometriqueSimple.h"
 
 class Segment : public FormeGeometriqueSimple
 {
