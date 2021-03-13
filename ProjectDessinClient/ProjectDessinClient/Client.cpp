@@ -64,3 +64,10 @@ void Client::rqtServ(string rqt)
 		cerr << erreur << endl;
 	}
 }
+
+void Client::fermerClient()
+{
+	delete this;
+}
+
+

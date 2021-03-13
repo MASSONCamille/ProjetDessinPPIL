@@ -10,8 +10,9 @@ int FormeGeometriqueSimple::Homothetie()
 {
 	return 0;
 }
-int FormeGeometriqueSimple::Rotation()
+int FormeGeometriqueSimple::Rotation(const Vecteur2D v, int angle)
 {
-	return 0;
+	angle = FormeGeometriqueBase::Rotation(v, angle);
+	return angle;
 }
 

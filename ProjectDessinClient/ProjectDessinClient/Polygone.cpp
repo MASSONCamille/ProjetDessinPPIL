@@ -14,9 +14,9 @@ int Polygone::Homothetie()
 {
 	return 0;
 }
-int Polygone::Rotation()
+int Polygone::Rotation(const Vecteur2D v, int angle)
 {
-	return 0;
+	return FormeGeometriqueSimple::Rotation(v, angle);
 }
 
 const Polygone & Polygone::operator=(const Polygone & p)

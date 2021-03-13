@@ -41,5 +41,8 @@ public:
 	}
 
 	void rqtServ(string);
+
+
+	void fermerClient();
 };
 

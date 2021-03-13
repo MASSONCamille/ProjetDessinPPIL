@@ -20,7 +20,7 @@ protected:
 	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const = 0;
 	virtual int Traslation(const Vecteur2D);
 	virtual int Homothetie();
-	virtual int Rotation();
+	virtual int Rotation(const Vecteur2D, int);
 
 public:
 	virtual ~FormeGeometriqueSimple() {};

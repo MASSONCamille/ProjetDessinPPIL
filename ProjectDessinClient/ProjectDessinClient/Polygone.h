@@ -53,7 +53,7 @@ public:
 	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const;
 	int Traslation();
 	int Homothetie();
-	int Rotation();
+	int Rotation(const Vecteur2D, int);
 
 	const Polygone & operator = (const Polygone &);
 
