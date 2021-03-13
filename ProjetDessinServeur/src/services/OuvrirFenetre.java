@@ -22,11 +22,18 @@ public class OuvrirFenetre extends RequeteCOR {
 			int y = Integer.parseInt(donnees[4]);
 			int width = Integer.parseInt(donnees[5]);
 			int high = Integer.parseInt(donnees[6]);
+			int numBuffers = 2;
 
 			fen.setBounds(x, y, width, high);
 			fen.setVisible(true);
 			fen.setIgnoreRepaint(true);
 			fen.setResizable(false);
+			fen.createBufferStrategy(numBuffers);
+			try {
+				Thread.sleep(150);
+			} catch (InterruptedException e) {
+				System.err.println("Erreur dans la mise en pause du thread");
+			}
 
 			FrameFactory.getInstance().getListFrame().add(new InfoFrame(noConnexion, donnees[1], fen));
 

@@ -20,15 +20,6 @@ public class DessinRond extends RequeteCOR {
 
 			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
 
-			int numBuffers = 2;
-			fen.createBufferStrategy(numBuffers);
-
-			try {
-				Thread.sleep(150);
-			} catch (InterruptedException e) {
-				System.err.println("Erreur dans la mise en pause du thread");
-			}
-
 			BufferStrategy strategie = fen.getBufferStrategy();
 			Graphics graphics = strategie.getDrawGraphics();
 
