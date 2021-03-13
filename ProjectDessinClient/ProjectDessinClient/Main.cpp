@@ -7,6 +7,8 @@ int main() {
 	Cercle *cercle1 = new Cercle(FormeGeometriqueBase::BLACK, Vecteur2D(100, 100), 50);
 	Croix *croix1 = new Croix(FormeGeometriqueBase::BLACK, Vecteur2D(50, 50), Vecteur2D(100, 100));
 	Segment *segment1 = new Segment(FormeGeometriqueBase::BLACK, Vecteur2D(110, 110), Vecteur2D(100, 100));
+	Triangle *triangle1 = new Triangle(FormeGeometriqueBase::BLACK, Vecteur2D(110, 110), Vecteur2D(100, 0), Vecteur2D(0, 100));
+
 
 	Vecteur2D v1, v2, v3;
 	v1 = Vecteur2D(0,1);
@@ -21,7 +23,7 @@ int main() {
 	
 	Fenetre * f1 = new Fenetre();
 
-	polygone1->Dessiner(f1, ServJava);
+	//polygone1->Dessiner(f1, ServJava);
 	
 	if (f1->Afficher(ServJava))
 		cout << "fenetre deja dessiner" << endl << endl;
@@ -29,8 +31,8 @@ int main() {
 	//if (f1->Afficher(ServJava))
 	//	cout << "fenetre deja dessiner" << endl << endl;
 
-	if (cercle1->Dessiner(f1, ServJava))
-		cout << "erreur cercle" << endl << endl;
+	//if (cercle1->Dessiner(f1, ServJava))
+	//	cout << "erreur cercle" << endl << endl;
 
 	//if (segment1->Dessiner(f1, ServJava))
 	//	cout << "erreur segment" << endl << endl;
@@ -40,6 +42,8 @@ int main() {
 
 	//if (croix1->Dessiner(f1, ServJava))
 	//	cout << "erreur cercle" << endl << endl;
+
+	triangle1->Dessiner(f1, ServJava);
 
 	int x;
 	cin >> x;

@@ -31,9 +31,10 @@ int DessinServJava::Dessiner(const Fenetre *f, const Croix *c) const
 
 int DessinServJava::Dessiner(const Fenetre *f, const Segment *s) const
 {
-	string msg = "segment/"; //"segment/$numfen/$x1/$y1/$x2/$y2"
+	string msg = "segment/"; //"segment/$numfen/$color/$x1/$y1/$x2/$y2"
 	msg = msg
 		+ to_string(f->getNumFen()) + "/"
+		+ to_string(s->getColor()) + "/"
 		+ to_string((int)s->getVec().getX()) + "/"
 		+ to_string((int)s->getVec().getY()) + "/"
 		+ to_string((int)(s->getPoint().getX() + s->getVec().getX())) + "/"
@@ -68,16 +69,21 @@ int DessinServJava::Dessiner(const Fenetre *f, const Polygone *p) const {
 }
 
 int DessinServJava::Dessiner(const Fenetre *f, const Triangle *t) const {
-	Segment *s1 = new Segment(t->getColor(), t->getVec(), t->getP2()),
-			*s2 = new Segment(t->getColor(), t->getVec(), t->getP3()),
-			*s3 = new Segment(t->getColor(), t->getVec() + t->getP2(),
-											 t->getVec() + t->getP3());
-	
-	int res = s1->Dessiner(f, this) +
-		s2->Dessiner(f, this) +
-		s3->Dessiner(f, this);
+	string msg = "triangle/"; //"triangle/$numfen/$color/$x1/$y1/$x2/$y2/$x3/$y3"
+	msg = msg
+		+ to_string(f->getNumFen()) + "/"
+		+ to_string(t->getColor()) + "/"
+		+ to_string((int)t->getVec().getX()) + "/"
+		+ to_string((int)t->getVec().getY()) + "/"
+		+ to_string((int)(t->getP2().getX() + t->getVec().getX())) + "/"
+		+ to_string((int)(t->getP2().getY() + t->getVec().getY())) + "/"
+		+ to_string((int)(t->getP3().getX() + t->getVec().getX())) + "/"
+		+ to_string((int)(t->getP3().getY() + t->getVec().getY()));
 
-	return res;
+
+	Client::getInstance()->rqtServ(msg);
+
+	return 0;
 }
 
 

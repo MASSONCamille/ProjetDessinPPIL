@@ -1,7 +1,7 @@
 #include "FormeGeometriqueBase.h"
 
 
-int FormeGeometriqueBase::Traslation()
+int FormeGeometriqueBase::Traslation(const Vecteur2D)
 {
 	return 0;
 }

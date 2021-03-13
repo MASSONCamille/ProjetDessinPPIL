@@ -1,6 +1,5 @@
 #pragma once
 #include "FormeGeometriqueBase.h"
-#include "Vecteur2D.h"
 
 class FormeGeometriqueSimple : public FormeGeometriqueBase
 {
@@ -19,7 +18,7 @@ protected:
 	}
 
 	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const = 0;
-	virtual int Traslation();
+	virtual int Traslation(const Vecteur2D);
 	virtual int Homothetie();
 	virtual int Rotation();
 

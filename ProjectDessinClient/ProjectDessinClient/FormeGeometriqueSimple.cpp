@@ -1,16 +1,17 @@
 #include "FormeGeometriqueSimple.h"
 
 
-int FormeGeometriqueSimple::Traslation()
+int FormeGeometriqueSimple::Traslation(const Vecteur2D v)
 {
-	return 1;
+	this->setVec(this->getVec() + v);
+	return 0;
 }
 int FormeGeometriqueSimple::Homothetie()
 {
-	return 1;
+	return 0;
 }
 int FormeGeometriqueSimple::Rotation()
 {
-	return 1;
+	return 0;
 }
 

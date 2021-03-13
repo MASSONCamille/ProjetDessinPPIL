@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Fenetre.h"
+#include "Vecteur2D.h"
 
 
 class VisitorDessin;
@@ -39,7 +40,7 @@ public:
 	}
 
 	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const = 0;
-	virtual int Traslation();
+	virtual int Traslation(const Vecteur2D);
 	virtual int Homothetie();
 	virtual int Rotation();
 
