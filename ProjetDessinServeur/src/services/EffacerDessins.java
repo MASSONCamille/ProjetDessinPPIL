@@ -1,6 +1,8 @@
 package services;
 
 import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
 
 import stockage.FrameFactory;
 
@@ -17,6 +19,13 @@ public class EffacerDessins extends RequeteCOR {
 			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
 
 			fen.removeAll();
+			BufferStrategy strategie = fen.getBufferStrategy();
+			Graphics graphics = strategie.getDrawGraphics();
+			graphics.clearRect(fen.getX(), fen.getY(), fen.getWidth(), fen.getHeight());
+
+			strategie.show();
+
+			graphics.dispose();
 
 			return true;
 		} else

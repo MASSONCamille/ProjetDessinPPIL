@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{B569D85B-2E3B-4DE4-AB75-66BE453796C0}</ProjectGuid>
     <RootNamespace>ProjectDessinClient</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -132,9 +132,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="ChargerCOR.cpp" />
+    <ClCompile Include="ChargerSegmentTxt.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Croix.cpp" />
     <ClCompile Include="DessinServJava.cpp" />
+    <ClCompile Include="DictionnaireCharger.cpp" />
     <ClCompile Include="Erreur.cpp" />
     <ClCompile Include="Fenetre.cpp" />
     <ClCompile Include="FormeGeometriqueBase.cpp" />
@@ -148,9 +151,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="Charger.h" />
+    <ClInclude Include="ChargerCOR.h" />
+    <ClInclude Include="ChargerSegmentTxt.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Croix.h" />
     <ClInclude Include="DessinServJava.h" />
+    <ClInclude Include="DictionnaireCharger.h" />
     <ClInclude Include="Erreur.h" />
     <ClInclude Include="Fenetre.h" />
     <ClInclude Include="FormeGeometriqueBase.h" />
