@@ -27,10 +27,9 @@ public class TheadClientHandler extends Thread {
 
 	public void run() {
 		String instruction;
-		boolean stopThread = false;
 
 		try {
-			while (!isInterrupted() && !stopThread) {
+			while (!isInterrupted()) {
 				instruction = fluxEntrant.readLine();
 				if (instruction != null) {
 					instruction = instruction.toLowerCase().trim();
