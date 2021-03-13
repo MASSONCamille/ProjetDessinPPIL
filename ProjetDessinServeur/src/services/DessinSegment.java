@@ -16,7 +16,7 @@ public class DessinSegment extends RequeteCOR {
 	@Override
 	protected boolean actionHandlerBis(String instruction, int noConnexion) {
 		String[] donnees = instruction.split("/");
-		if (donnees[0].equals("croix") && donnees.length == 7) {
+		if (donnees[0].equals("segment") && donnees.length == 7) {
 			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
 
 			int numBuffers = 2;
