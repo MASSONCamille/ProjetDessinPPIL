@@ -7,7 +7,7 @@ import java.io.PrintStream;
 import java.net.Socket;
 
 import services.DictionnaireRequete;
-import stockage.SingletonListFrame;
+import stockage.FrameFactory;
 
 public class TheadClientHandler extends Thread {
 	Socket socket;
@@ -50,8 +50,7 @@ public class TheadClientHandler extends Thread {
 			System.err.println("Impossible de lire le Socket");
 		}
 
-		SingletonListFrame singletonListeFrame = SingletonListFrame.getInstance();
-		singletonListeFrame.emptyAllFramesClient(noConnexion);
+		FrameFactory.getInstance().emptyAllFramesClient(noConnexion);
 
 	}
 }

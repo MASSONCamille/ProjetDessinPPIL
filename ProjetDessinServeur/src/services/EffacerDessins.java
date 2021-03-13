@@ -2,7 +2,7 @@ package services;
 
 import java.awt.Frame;
 
-import stockage.SingletonListFrame;
+import stockage.FrameFactory;
 
 public class EffacerDessins extends RequeteCOR {
 
@@ -14,9 +14,9 @@ public class EffacerDessins extends RequeteCOR {
 	protected boolean actionHandlerBis(String instruction, int noConnexion) {
 		String[] donnees = instruction.split("/");
 		if (donnees[0].equals("effacer") && donnees.length == 2) {
-			Frame fen = SingletonListFrame.getInstance().getFrame(noConnexion, donnees[1]);
+			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
 
-			fen.removeAll(); // A voir
+			fen.removeAll();
 
 			return true;
 		} else

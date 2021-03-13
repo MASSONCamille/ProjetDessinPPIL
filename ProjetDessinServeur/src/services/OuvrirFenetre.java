@@ -2,8 +2,8 @@ package services;
 
 import java.awt.Frame;
 
+import stockage.FrameFactory;
 import stockage.InfoFrame;
-import stockage.SingletonListFrame;
 
 public class OuvrirFenetre extends RequeteCOR {
 
@@ -23,13 +23,12 @@ public class OuvrirFenetre extends RequeteCOR {
 			int width = Integer.parseInt(donnees[5]);
 			int high = Integer.parseInt(donnees[6]);
 
-			fen.setBounds(x, y, width, high); // A voir comment faire
+			fen.setBounds(x, y, width, high);
 			fen.setVisible(true);
 			fen.setIgnoreRepaint(true);
 			fen.setResizable(false);
 
-			SingletonListFrame singletonListeFrame = SingletonListFrame.getInstance();
-			singletonListeFrame.getListFrame().add(new InfoFrame(noConnexion, donnees[1], fen));
+			FrameFactory.getInstance().getListFrame().add(new InfoFrame(noConnexion, donnees[1], fen));
 
 			return true;
 		} else

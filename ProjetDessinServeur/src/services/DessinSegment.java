@@ -7,9 +7,9 @@ import java.awt.image.BufferStrategy;
 import stockage.ColorFactory;
 import stockage.FrameFactory;
 
-public class DessinCroix extends RequeteCOR {
+public class DessinSegment extends RequeteCOR {
 
-	public DessinCroix(RequeteCOR requeteCORsuivant) {
+	public DessinSegment(RequeteCOR requeteCORsuivant) {
 		super(requeteCORsuivant);
 	}
 
@@ -38,8 +38,6 @@ public class DessinCroix extends RequeteCOR {
 			int y2 = Integer.parseInt(donnees[6]);
 
 			graphics.drawLine(x1, y1, x2, y2);
-
-			graphics.drawLine(x1, x2, y2, y1);
 
 			strategie.show();
 

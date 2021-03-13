@@ -3,18 +3,18 @@ package stockage;
 import java.awt.Frame;
 import java.util.ArrayList;
 
-public final class SingletonListFrame {
+public final class FrameFactory {
 
-	private static SingletonListFrame instance;
+	private static FrameFactory instance = null;
 
 	public ArrayList<InfoFrame> listFrame = new ArrayList<InfoFrame>();
 
-	private SingletonListFrame() {
+	private FrameFactory() {
 	}
 
-	public static SingletonListFrame getInstance() {
+	public static FrameFactory getInstance() {
 		if (instance == null) {
-			instance = new SingletonListFrame();
+			instance = new FrameFactory();
 		}
 		return instance;
 	}
@@ -31,7 +31,7 @@ public final class SingletonListFrame {
 
 		while (!trouve && i < taille) {
 			infoFrameVerif = listFrame.get(i);
-			if (infoFrameVerif.getNoConnexion() == noConnexion && infoFrameVerif.getNoFrame() == noFrame) {
+			if (infoFrameVerif.getNoConnexion() == noConnexion && infoFrameVerif.getNoFrame().equals(noFrame)) {
 				trouve = true;
 			}
 			i++;

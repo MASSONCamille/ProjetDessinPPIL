@@ -7,16 +7,16 @@ import java.awt.image.BufferStrategy;
 import stockage.ColorFactory;
 import stockage.FrameFactory;
 
-public class DessinCroix extends RequeteCOR {
+public class DessinTriangle extends RequeteCOR {
 
-	public DessinCroix(RequeteCOR requeteCORsuivant) {
+	public DessinTriangle(RequeteCOR requeteCORsuivant) {
 		super(requeteCORsuivant);
 	}
 
 	@Override
 	protected boolean actionHandlerBis(String instruction, int noConnexion) {
 		String[] donnees = instruction.split("/");
-		if (donnees[0].equals("croix") && donnees.length == 7) {
+		if (donnees[0].equals("croix") && donnees.length == 9) {
 			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
 
 			int numBuffers = 2;
@@ -36,10 +36,12 @@ public class DessinCroix extends RequeteCOR {
 			int y1 = Integer.parseInt(donnees[4]);
 			int x2 = Integer.parseInt(donnees[5]);
 			int y2 = Integer.parseInt(donnees[6]);
+			int x3 = Integer.parseInt(donnees[7]);
+			int y3 = Integer.parseInt(donnees[8]);
 
 			graphics.drawLine(x1, y1, x2, y2);
-
-			graphics.drawLine(x1, x2, y2, y1);
+			graphics.drawLine(x2, y2, x3, y3);
+			graphics.drawLine(x3, y3, x1, y1);
 
 			strategie.show();
 
