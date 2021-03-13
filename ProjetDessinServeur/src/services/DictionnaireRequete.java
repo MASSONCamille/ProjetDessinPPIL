@@ -8,7 +8,8 @@ public class DictionnaireRequete {
 		super();
 
 		RequeteCOR effacerDessins = new EffacerDessins(null);
-		RequeteCOR dessinSegment = new DessinSegment(effacerDessins);
+		RequeteCOR fermerFenetre = new FermerFenetre(effacerDessins);
+		RequeteCOR dessinSegment = new DessinSegment(fermerFenetre);
 		RequeteCOR dessinTriangle = new DessinTriangle(dessinSegment);
 		RequeteCOR dessinRond = new DessinRond(dessinTriangle);
 		RequeteCOR dessinCroix = new DessinCroix(dessinRond);
