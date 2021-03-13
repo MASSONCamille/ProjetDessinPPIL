@@ -2,9 +2,10 @@
 
 int DessinServJava::Dessiner(const Fenetre *f, const Cercle *c) const
 {
-	string msg = "rond/"; //"rond/$numfen/$x/$y/$rayon"
+	string msg = "rond/"; //"rond/$numfen/$color/$x/$y/$rayon"
 	msg = msg
 		+ to_string(f->getNumFen()) + "/"
+		+ to_string(c->getColor()) + "/"
 		+ to_string((int) c->getVec().getX()) + "/"
 		+ to_string((int) c->getVec().getY()) + "/"
 		+ to_string((int) c->getRayon());
@@ -16,9 +17,10 @@ int DessinServJava::Dessiner(const Fenetre *f, const Cercle *c) const
 
 int DessinServJava::Dessiner(const Fenetre *f, const Croix *c) const
 {
-	string msg = "croix/"; //"croix/$numfen/$x1/$y1/$x2/$y2"
+	string msg = "croix/"; //"croix/$numfen/$color/$x1/$y1/$x2/$y2"
 	msg = msg
 		+ to_string(f->getNumFen()) + "/"
+		+ to_string(c->getColor()) + "/"
 		+ to_string((int)c->getVec().getX()) + "/"
 		+ to_string((int)c->getVec().getY()) + "/"
 		+ to_string((int)(c->getDiagonale().getX() + c->getVec().getX())) + "/"
