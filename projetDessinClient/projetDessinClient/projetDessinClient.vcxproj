@@ -33,6 +33,7 @@
     <ClCompile Include="Erreur.cpp" />
     <ClCompile Include="Fenetre.cpp" />
     <ClCompile Include="FormeGeometriqueBase.cpp" />
+    <ClCompile Include="FormeGeometriqueCompose.cpp" />
     <ClCompile Include="FormeGeometriqueSimple.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Polygone.cpp" />
@@ -57,6 +58,7 @@
     <ClInclude Include="Erreur.h" />
     <ClInclude Include="Fenetre.h" />
     <ClInclude Include="FormeGeometriqueBase.h" />
+    <ClInclude Include="FormeGeometriqueCompose.h" />
     <ClInclude Include="FormeGeometriqueSimple.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="Segment.h" />

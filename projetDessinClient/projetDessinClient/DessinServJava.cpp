@@ -70,6 +70,15 @@ int DessinServJava::Dessiner(const Fenetre *f, const Polygone *p) const {
 	return 0;
 }
 
+int DessinServJava::Dessiner(const Fenetre *f, const FormeGeometriqueCompose *fc) const {
+	cout << "ici" << endl;
+	for (int i = 0; i < fc->getNbForme(); i++) {
+		if (fc->getListForme()[i]->Dessiner(f, this)) return 1; // tracer
+	}
+
+	return 0;
+}
+
 int DessinServJava::Dessiner(const Fenetre *f, const Triangle *t) const {
 	string msg = "triangle/"; //"triangle/$numfen/$color/$x1/$y1/$x2/$y2/$x3/$y3"
 	msg = msg

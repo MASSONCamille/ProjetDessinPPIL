@@ -17,11 +17,6 @@ protected:
 		this->_vecteurOrigine = v;
 	}
 
-	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const { return 0; };
-	virtual int Traslation(const Vecteur2D);
-	virtual int Homothetie();
-	virtual int Rotation(const Vecteur2D, int);
-
 public:
 	virtual ~FormeGeometriqueSimple() {};
 
@@ -34,9 +29,14 @@ public:
 		this->_vecteurOrigine = v;
 	}
 
+	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const { return 0; };
+	virtual int Traslation(const Vecteur2D);
+	virtual int Homothetie();
+	virtual int Rotation(const Vecteur2D, int);
+
 	friend ostream& operator<<(ostream&, const FormeGeometriqueSimple&);
 
-	const string to_string() const;
+	virtual const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const FormeGeometriqueSimple &);

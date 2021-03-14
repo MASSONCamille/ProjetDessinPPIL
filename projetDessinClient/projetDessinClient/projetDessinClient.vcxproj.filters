@@ -105,6 +105,9 @@
     <ClCompile Include="ChargerPolygoneTxt.cpp">
       <Filter>Fichiers sources\Charger</Filter>
     </ClCompile>
+    <ClCompile Include="FormeGeometriqueCompose.cpp">
+      <Filter>Fichiers sources\FormeGeometrique</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VisitorDessin.h">
@@ -169,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="ChargerTriangleTxt.h">
       <Filter>Fichiers d%27en-tête\Charger</Filter>
+    </ClInclude>
+    <ClInclude Include="FormeGeometriqueCompose.h">
+      <Filter>Fichiers d%27en-tête\FormeGeometrique</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

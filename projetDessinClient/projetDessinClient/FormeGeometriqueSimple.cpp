@@ -12,7 +12,6 @@ int FormeGeometriqueSimple::Homothetie()
 }
 int FormeGeometriqueSimple::Rotation(const Vecteur2D vr, int angle)
 {
-	angle = FormeGeometriqueBase::Rotation(vr, angle);
 	this->_vecteurOrigine = vr + (this->_vecteurOrigine - vr).rota(angle);
 	return 0;
 }
