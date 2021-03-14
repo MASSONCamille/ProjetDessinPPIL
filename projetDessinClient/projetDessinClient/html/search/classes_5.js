@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['segment_40',['Segment',['../class_segment.html',1,'']]]
+  ['sauvgtxt_42',['SauvgTxt',['../class_sauvg_txt.html',1,'']]],
+  ['segment_43',['Segment',['../class_segment.html',1,'']]]
 ];

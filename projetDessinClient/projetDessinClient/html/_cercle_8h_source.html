@@ -107,19 +107,22 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> Homothetie();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> Rotation(<span class="keyword">const</span> <a class="code" href="class_vecteur2_d.html">Vecteur2D</a>, <span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a> &amp; operator = (<span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a> &amp;);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> Save(<span class="keyword">const</span> <a class="code" href="class_visitor_sauvg.html">VisitorSauvg</a> *) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt;(ostream&amp;, <span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a>&amp;);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> to_string() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> ostream&amp; operator&lt;&lt;(ostream&amp;, <span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a>&amp;);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a> &amp; operator = (<span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a> &amp;);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">friend</span> ostream&amp; operator&lt;&lt;(ostream&amp;, <span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a>&amp;);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> to_string() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">extern</span> ostream&amp; operator&lt;&lt;(ostream&amp;, <span class="keyword">const</span> <a class="code" href="class_cercle.html">Cercle</a>&amp;);</div>
 <div class="ttc" id="aclass_cercle_html"><div class="ttname"><a href="class_cercle.html">Cercle</a></div><div class="ttdef"><b>Definition:</b> Cercle.h:6</div></div>
 <div class="ttc" id="aclass_fenetre_html"><div class="ttname"><a href="class_fenetre.html">Fenetre</a></div><div class="ttdef"><b>Definition:</b> Fenetre.h:12</div></div>
 <div class="ttc" id="aclass_forme_geometrique_simple_html"><div class="ttname"><a href="class_forme_geometrique_simple.html">FormeGeometriqueSimple</a></div><div class="ttdef"><b>Definition:</b> FormeGeometriqueSimple.h:5</div></div>
 <div class="ttc" id="aclass_vecteur2_d_html"><div class="ttname"><a href="class_vecteur2_d.html">Vecteur2D</a></div><div class="ttdef"><b>Definition:</b> Vecteur2D.h:12</div></div>
 <div class="ttc" id="aclass_visitor_dessin_html"><div class="ttname"><a href="class_visitor_dessin.html">VisitorDessin</a></div><div class="ttdef"><b>Definition:</b> VisitorDessin.h:13</div></div>
+<div class="ttc" id="aclass_visitor_sauvg_html"><div class="ttname"><a href="class_visitor_sauvg.html">VisitorSauvg</a></div><div class="ttdef"><b>Definition:</b> VisitorSauvg.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
