@@ -1,0 +1,19 @@
+﻿  Cercle.cpp
+  ChargerCOR.cpp
+  ChargerSegmentTxt.cpp
+  Client.cpp
+  Croix.cpp
+  DessinServJava.cpp
+  DictionnaireCharger.cpp
+  Erreur.cpp
+  Fenetre.cpp
+  FormeGeometriqueBase.cpp
+  FormeGeometriqueSimple.cpp
+  Main.cpp
+  Polygone.cpp
+  Segment.cpp
+  Triangle.cpp
+  Vecteur2D.cpp
+  VisitorDessin.cpp
+  Génération de code en cours...
+  projetDessinClient.vcxproj -> E:\cours\L3\S2\PPIL\ProjetDessinPPIL\projetDessinClient\Debug\projetDessinClient.exe
