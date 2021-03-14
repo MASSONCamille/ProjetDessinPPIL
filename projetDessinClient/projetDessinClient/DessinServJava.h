@@ -11,6 +11,7 @@ class DessinServJava : public VisitorDessin
 	int Dessiner(const Fenetre *, const Segment *) const;
 	int Dessiner(const Fenetre *, const Polygone *) const;
 	int Dessiner(const Fenetre *, const Triangle *) const;
+	int Dessiner(const Fenetre *, const FormeGeometriqueCompose *) const;
 
 	int Afficher(const Fenetre *) const;
 	int Effacer(const Fenetre *) const;

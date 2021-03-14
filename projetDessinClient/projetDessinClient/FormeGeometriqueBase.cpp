@@ -19,9 +19,8 @@ int FormeGeometriqueBase::Homothetie()
 }
 int FormeGeometriqueBase::Rotation(const Vecteur2D v, int angle)
 {
-	return angle % 360;
+	return 0;
 }
-
 ostream & operator<<(ostream &os, const FormeGeometriqueBase &f)
 {
 	return os << "color: " << f._color;
