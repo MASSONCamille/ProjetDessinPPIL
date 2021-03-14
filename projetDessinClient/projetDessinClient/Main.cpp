@@ -22,25 +22,44 @@ int main() {
 	
 	Fenetre *f1 = new Fenetre();
 
-	DictionnaireCharger* dico = new DictionnaireCharger();
+	//------------------------------------------------//
+	//--- TEST TO_STRING ---//
+
+	/*cout << *cercle1 << endl;
+	cout << cercle1->to_string() << endl;
+
+	cout << *croix1 << endl;
+	cout << croix1->to_string() << endl;
+
+	cout << *segment1 << endl;
+	cout << segment1->to_string() << endl;
+
+	cout << *polygone1 << endl;
+	cout << polygone1->to_string() << endl;
+
+	cout << *triangle1 << endl;
+	cout << triangle1->to_string() << endl;*/
+
 
 	//------------------------------------------------//
 	//--- TEST CHARGER ---//
 
-	/*Cercle* cer = (Cercle*)dico->getCharger()->charger("test1.txt", "cercle");
-	cout << to_string(cer->getVec().getX()) << " " << to_string(cer->getColor()) << endl;*/
+	/*DictionnaireCharger* dico = new DictionnaireCharger();
 
-	/*Croix* cro = (Croix*)dico->getCharger()->charger("test2.txt", "croix");
-	cout << to_string(cro->getVec().getX()) << " " << to_string(cro->getColor()) << endl;*/
+	Cercle* cercleCharger = (Cercle*)dico->getCharger()->charger("test1.txt", "cercle");
+	cout << *cercleCharger << endl;
 
-	/*Polygone* pol = (Polygone*)dico->getCharger()->charger("test3.txt", "polygone");
-	cout << to_string(pol->getVec().getX()) << " " << to_string(pol->getColor()) << endl;*/
+	Croix* croixCharger = (Croix*)dico->getCharger()->charger("test2.txt", "croix");
+	cout << *croixCharger << endl;
 
-	/*Segment* seg = (Segment*)dico->getCharger()->charger("test4.txt", "segment");
-	cout << to_string(seg->getVec().getX()) << " " << to_string(seg->getColor()) << endl;*/
+	Polygone* polygoneCharger = (Polygone*)dico->getCharger()->charger("test3.txt", "polygone");
+	cout << *polygoneCharger << endl;
 
-	/*Triangle* tri = (Triangle*)dico->getCharger()->charger("test5.txt", "triangle");
-	cout << to_string(tri->getVec().getX()) << " " << to_string(tri->getColor()) << endl;*/
+	Segment* segmentCharger = (Segment*)dico->getCharger()->charger("test4.txt", "segment");
+	cout << *segmentCharger << endl;
+
+	Triangle* triangleCharger = (Triangle*)dico->getCharger()->charger("test5.txt", "triangle");
+	cout << *triangleCharger << endl;*/
 
 
 	//------------------------------------------------//

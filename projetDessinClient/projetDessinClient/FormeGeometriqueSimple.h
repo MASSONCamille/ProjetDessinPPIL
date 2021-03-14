@@ -35,6 +35,8 @@ public:
 	}
 
 	friend ostream& operator<<(ostream&, const FormeGeometriqueSimple&);
+
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const FormeGeometriqueSimple &);

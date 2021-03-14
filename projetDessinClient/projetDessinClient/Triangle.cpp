@@ -41,3 +41,7 @@ ostream & operator<<(ostream &os, const Triangle &t)
 	FormeGeometriqueSimple var = t;
 	return os << "Triangle [" << var << ", vectPoint2: " << t._p2 << ", vectPoint3: " << t._p3 << "]";
 }
+
+const string Triangle::to_string() const {
+	return "Triangle: [" + FormeGeometriqueSimple::to_string() + ", Point2: " + this->_p2.to_string() + ", Point3: " + this->_p3.to_string() + "]";
+}

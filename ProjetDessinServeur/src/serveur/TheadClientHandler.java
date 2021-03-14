@@ -50,6 +50,7 @@ public class TheadClientHandler extends Thread {
 		}
 
 		FrameFactory.getInstance().emptyAllFramesClient(noConnexion);
+		System.out.println("Le client n° " + this.noConnexion + " a terminé sa session.");
 
 	}
 }

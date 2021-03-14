@@ -43,6 +43,8 @@ public:
 	const Cercle & operator = (const Cercle &);
 
 	friend ostream& operator<<(ostream&, const Cercle&);
+	
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const Cercle&);

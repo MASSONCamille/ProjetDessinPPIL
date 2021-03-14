@@ -41,3 +41,7 @@ ostream & operator<<(ostream &os, const Segment &s)
 	FormeGeometriqueSimple var = s;
 	return os << "Segment [" << var << ", vecteurPoint: " << s._point << "]";
 }
+
+const string Segment::to_string() const {
+	return "Segment: [" + FormeGeometriqueSimple::to_string() + ", Point: " + this->_point.to_string() + "]";
+}

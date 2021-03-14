@@ -56,6 +56,8 @@ public:
 	const Triangle & operator = (const Triangle &);
 
 	friend ostream& operator<<(ostream&, const Triangle&);
+
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const Triangle&);

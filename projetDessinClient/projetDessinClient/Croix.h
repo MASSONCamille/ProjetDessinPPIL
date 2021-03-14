@@ -42,6 +42,8 @@ public:
 	const Croix & operator = (const Croix &);
 
 	friend ostream& operator<<(ostream&, const Croix&);
+
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const Croix&);

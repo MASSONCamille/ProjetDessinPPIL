@@ -41,3 +41,7 @@ ostream & operator<<(ostream &os, const Croix &c)
 	FormeGeometriqueSimple var = c;
 	return os << "Croix [" << var << ", diagonale: " << c._diagonale << "]";
 }
+
+const string Croix::to_string() const {
+	return "Croix: [" + FormeGeometriqueSimple::to_string() + ", Diagonale: " + this->_diagonale.to_string() + "]";
+}

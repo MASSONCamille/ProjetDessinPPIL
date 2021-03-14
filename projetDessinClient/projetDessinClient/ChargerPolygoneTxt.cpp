@@ -13,7 +13,7 @@ FormeGeometriqueBase* ChargerPolygoneTxt::charger1(string nomFichier, string for
         fichier.open("../Sauvegardes/" + nomFichier);
         if (fichier.good()) {
             if (getline(fichier, ligne)) {
-                int pos = 0;
+                size_t pos = 0;
                 int i = 0;
                 string delimiter = "/";
                 string donnees[4];

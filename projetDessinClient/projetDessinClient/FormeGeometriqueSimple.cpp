@@ -22,3 +22,7 @@ ostream & operator<<(ostream &os, const FormeGeometriqueSimple &f)
 	FormeGeometriqueBase var = f;
 	return os << var << ", origin: " << f._vecteurOrigine;
 }
+
+const string FormeGeometriqueSimple::to_string() const {
+	return FormeGeometriqueBase::to_string() + ", Origin: " + this->_vecteurOrigine.to_string();
+}

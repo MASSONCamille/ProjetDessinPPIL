@@ -44,6 +44,8 @@ public:
 	const Segment & operator = (const Segment &);
 
 	friend ostream& operator<<(ostream&, const Segment&);
+
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const Segment&);

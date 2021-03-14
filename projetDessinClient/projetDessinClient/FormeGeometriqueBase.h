@@ -18,6 +18,8 @@ public:
 		CYAN = 5
 	};
 
+	static const char* couleurs_str[6];
+
 	inline FormeGeometriqueBase()
 	{
 		this->_color = BLACK;
@@ -44,6 +46,8 @@ public:
 	virtual int Rotation(const Vecteur2D, int);
 
 	friend ostream& operator<<(ostream&, const FormeGeometriqueBase&);
+
+	const string to_string() const;
 
 private:
 	Couleurs _color;

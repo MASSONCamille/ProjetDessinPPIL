@@ -49,3 +49,14 @@ ostream & operator<<(ostream &os, const Polygone &p)
 
 	return os << "]" << endl << "]";
 }
+
+const string Polygone::to_string() const {
+	string message = "Polygone: [" + FormeGeometriqueSimple::to_string() + ", Nombre de point: " + std::to_string(this->_nbPoint) + "\n";
+	int i = 2;
+	for (Vecteur2D v : this->_listPoint) {
+		message += ("Point" + std::to_string(i) +": " + v.to_string() + "\n");
+		i++;
+	}
+	message += "]";
+	return message;
+}

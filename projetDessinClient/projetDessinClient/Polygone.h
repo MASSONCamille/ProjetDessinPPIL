@@ -58,6 +58,8 @@ public:
 	const Polygone & operator = (const Polygone &);
 
 	friend ostream& operator<<(ostream&, const Polygone&);
+
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const Polygone&);

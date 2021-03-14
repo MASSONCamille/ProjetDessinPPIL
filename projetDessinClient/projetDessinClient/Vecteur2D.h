@@ -55,6 +55,8 @@ public:
 	Vecteur2D operator - () const;
 
 	friend ostream& operator<<(ostream&, const Vecteur2D&);
+
+	const string to_string() const;
 };
 
 extern ostream& operator<<(ostream&, const Vecteur2D &);

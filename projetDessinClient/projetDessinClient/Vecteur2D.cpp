@@ -44,3 +44,7 @@ ostream & operator<<(ostream &os, const Vecteur2D &v)
 {
 	return os << v.getX() << "|" << v.getY();
 }
+
+const string Vecteur2D::to_string() const {
+	return "x=" + std::to_string(this->_x) + " | y=" + std::to_string(this->_y);
+}

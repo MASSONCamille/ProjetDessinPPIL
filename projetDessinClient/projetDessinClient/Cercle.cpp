@@ -34,3 +34,7 @@ ostream & operator<<(ostream &os, const Cercle &c)
 	FormeGeometriqueSimple var = c;
 	return os << "Cercle [" << var << ", rayon: " << c._rayon << "]";
 }
+
+const string Cercle::to_string() const {
+	return "Cercle: [" + FormeGeometriqueSimple::to_string() + ", Rayon: " + std::to_string(this->_rayon) + "]";
+}
