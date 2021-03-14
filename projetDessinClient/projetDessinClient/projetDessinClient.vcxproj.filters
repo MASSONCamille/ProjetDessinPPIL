@@ -93,6 +93,18 @@
     <ClCompile Include="Erreur.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="ChargerCercleTxt.cpp">
+      <Filter>Fichiers sources\Charger</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargerCroixTxt.cpp">
+      <Filter>Fichiers sources\Charger</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargerTriangleTxt.cpp">
+      <Filter>Fichiers sources\Charger</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargerPolygoneTxt.cpp">
+      <Filter>Fichiers sources\Charger</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VisitorDessin.h">
@@ -145,6 +157,18 @@
     </ClInclude>
     <ClInclude Include="Erreur.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargerCercleTxt.h">
+      <Filter>Fichiers d%27en-tête\Charger</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargerCroixTxt.h">
+      <Filter>Fichiers d%27en-tête\Charger</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargerPolygoneTxt.h">
+      <Filter>Fichiers d%27en-tête\Charger</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargerTriangleTxt.h">
+      <Filter>Fichiers d%27en-tête\Charger</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

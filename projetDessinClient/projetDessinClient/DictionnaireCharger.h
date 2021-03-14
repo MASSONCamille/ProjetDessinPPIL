@@ -2,7 +2,6 @@
 
 #include "Charger.h"
 #include "ChargerCOR.h"
-#include "ChargerSegmentTxt.h"
 
 class DictionnaireCharger {
 

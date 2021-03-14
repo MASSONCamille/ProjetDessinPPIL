@@ -20,8 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="ChargerCercleTxt.cpp" />
     <ClCompile Include="ChargerCOR.cpp" />
+    <ClCompile Include="ChargerCroixTxt.cpp" />
+    <ClCompile Include="ChargerPolygoneTxt.cpp" />
     <ClCompile Include="ChargerSegmentTxt.cpp" />
+    <ClCompile Include="ChargerTriangleTxt.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Croix.cpp" />
     <ClCompile Include="DessinServJava.cpp" />
@@ -40,8 +44,12 @@
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="Charger.h" />
+    <ClInclude Include="ChargerCercleTxt.h" />
     <ClInclude Include="ChargerCOR.h" />
+    <ClInclude Include="ChargerCroixTxt.h" />
+    <ClInclude Include="ChargerPolygoneTxt.h" />
     <ClInclude Include="ChargerSegmentTxt.h" />
+    <ClInclude Include="ChargerTriangleTxt.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="Croix.h" />
     <ClInclude Include="DessinServJava.h" />
@@ -58,15 +66,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-<<<<<<< HEAD:ProjectDessinClient/ProjectDessinClient/ProjectDessinClient.vcxproj
-    <ProjectGuid>{B569D85B-2E3B-4DE4-AB75-66BE453796C0}</ProjectGuid>
-    <RootNamespace>ProjectDessinClient</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-=======
     <ProjectGuid>{9863C5DB-87CF-4A6A-9762-0C79C729E904}</ProjectGuid>
-    <RootNamespace>projetDessinClient</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
->>>>>>> db931640cb7c40e28fc3a1749e26cb51615b187b:projetDessinClient/projetDessinClient/projetDessinClient.vcxproj
+    <RootNamespace>ProjectDessinClient</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

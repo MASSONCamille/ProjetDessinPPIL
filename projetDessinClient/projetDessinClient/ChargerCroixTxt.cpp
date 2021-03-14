@@ -1,13 +1,13 @@
-#include "ChargerSegmentTxt.h"
-#include "Segment.h"
+#include "ChargerCroixTxt.h"
+#include "Croix.h"
 #include <regex>
 #include <fstream>
 
-ChargerSegmentTxt::ChargerSegmentTxt(ChargerCOR* suivant) : ChargerCOR(suivant) {}
+ChargerCroixTxt::ChargerCroixTxt(ChargerCOR* suivant) : ChargerCOR(suivant) {}
 
-FormeGeometriqueBase* ChargerSegmentTxt::charger1(string nomFichier, string forme) const
+FormeGeometriqueBase* ChargerCroixTxt::charger1(string nomFichier, string forme) const
 {
-    if (regex_match(nomFichier, regex("(\\w+).txt$")) && forme == "segment") {
+    if (regex_match(nomFichier, regex("(\\w+).txt$")) && forme == "croix") {
         string ligne;
         ifstream fichier;
         fichier.open("../Sauvegardes/" + nomFichier);
@@ -22,7 +22,7 @@ FormeGeometriqueBase* ChargerSegmentTxt::charger1(string nomFichier, string form
                     ligne.erase(0, pos + delimiter.length());
                     i++;
                 }
-                return new Segment((FormeGeometriqueBase::Couleurs)stoi(donnees[0]), Vecteur2D(stod(donnees[1]), stod(donnees[2])), Vecteur2D(stod(donnees[3]), stod(donnees[4])));
+                return new Croix((FormeGeometriqueBase::Couleurs)stoi(donnees[0]), Vecteur2D(stod(donnees[1]), stod(donnees[2])), Vecteur2D(stod(donnees[3]), stod(donnees[4])));
             }
         }
         fichier.close();

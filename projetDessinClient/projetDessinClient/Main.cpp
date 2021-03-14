@@ -1,4 +1,5 @@
 #include "DessinServJava.h"
+#include "DictionnaireCharger.h"
 
 
 int main() {
@@ -20,12 +21,32 @@ int main() {
 	ServJava = new DessinServJava();
 	
 	Fenetre *f1 = new Fenetre();
-	
+
+	DictionnaireCharger* dico = new DictionnaireCharger();
+
+	//------------------------------------------------//
+	//--- TEST CHARGER ---//
+
+	/*Cercle* cer = (Cercle*)dico->getCharger()->charger("test1.txt", "cercle");
+	cout << to_string(cer->getVec().getX()) << " " << to_string(cer->getColor()) << endl;*/
+
+	/*Croix* cro = (Croix*)dico->getCharger()->charger("test2.txt", "croix");
+	cout << to_string(cro->getVec().getX()) << " " << to_string(cro->getColor()) << endl;*/
+
+	/*Polygone* pol = (Polygone*)dico->getCharger()->charger("test3.txt", "polygone");
+	cout << to_string(pol->getVec().getX()) << " " << to_string(pol->getColor()) << endl;*/
+
+	/*Segment* seg = (Segment*)dico->getCharger()->charger("test4.txt", "segment");
+	cout << to_string(seg->getVec().getX()) << " " << to_string(seg->getColor()) << endl;*/
+
+	/*Triangle* tri = (Triangle*)dico->getCharger()->charger("test5.txt", "triangle");
+	cout << to_string(tri->getVec().getX()) << " " << to_string(tri->getColor()) << endl;*/
+
 
 	//------------------------------------------------//
 	//--- TEST CONSOLE ---//
 
-	cout << *f1 << endl;
+	/*cout << *f1 << endl;
 	cout << *croix1 << endl;
 	cout << *cercle1 << endl;
 	cout << *segment1 << endl;
@@ -40,7 +61,9 @@ int main() {
 	cout << *polygone1 << endl;
 
 
-	cout << endl << endl;
+	cout << endl << endl;*/
+
+
 	//------------------------------------------------//
 	//--- TEST SERVEUR ---//
 
