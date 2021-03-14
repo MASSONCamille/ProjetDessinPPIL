@@ -19,7 +19,6 @@ private:
 	int _width, _height;
 	bool _afficher;
 
-	virtual ~Fenetre() {};
 
 public:
 	inline Fenetre() {
@@ -80,5 +79,9 @@ public:
 	int Afficher(VisitorDessin *);
 	int Effacer(VisitorDessin *);
 	int Detruire(VisitorDessin *);
+
+	friend ostream& operator<<(ostream&, const Fenetre &);
 };
+
+extern ostream& operator<<(ostream&, const Fenetre &);
 

@@ -2,6 +2,9 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 
 using namespace std;
 
@@ -43,9 +46,15 @@ public:
 	}
 
 
-	const Vecteur2D operator + (const Vecteur2D & u) const;
-	const Vecteur2D operator - (const Vecteur2D & u) const;
-	const Vecteur2D operator * (const double & a) const;
-	const Vecteur2D operator - () const;
+	Vecteur2D rota(const int tau);
+
+	const Vecteur2D & operator = (const Vecteur2D &);
+	Vecteur2D operator + (const Vecteur2D & u) const;
+	Vecteur2D operator - (const Vecteur2D & u) const;
+	Vecteur2D operator * (const double & a) const;
+	Vecteur2D operator - () const;
+
+	friend ostream& operator<<(ostream&, const Vecteur2D&);
 };
 
+extern ostream& operator<<(ostream&, const Vecteur2D &);

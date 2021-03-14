@@ -51,11 +51,14 @@ public:
 
 
 	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const;
-	int Traslation();
+	int Traslation(const Vecteur2D);
 	int Homothetie();
 	int Rotation(const Vecteur2D, int);
 
 	const Polygone & operator = (const Polygone &);
 
+	friend ostream& operator<<(ostream&, const Polygone&);
 };
+
+extern ostream& operator<<(ostream&, const Polygone&);
 

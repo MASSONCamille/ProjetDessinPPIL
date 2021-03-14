@@ -22,6 +22,10 @@ public:
 	{
 		this->_color = BLACK;
 	}
+	inline FormeGeometriqueBase(const Couleurs c)
+	{
+		this->_color = c;
+	}
 
 	virtual ~FormeGeometriqueBase() {};
 
@@ -34,17 +38,16 @@ public:
 		this->_color = c;
 	}
 
-	inline FormeGeometriqueBase(const Couleurs c)
-	{
-		this->_color = c;
-	}
-
-	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const = 0;
+	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const { return 0; };
 	virtual int Traslation(const Vecteur2D);
 	virtual int Homothetie();
 	virtual int Rotation(const Vecteur2D, int);
 
+	friend ostream& operator<<(ostream&, const FormeGeometriqueBase&);
+
 private:
 	Couleurs _color;
 };
+
+extern ostream& operator<<(ostream&, const FormeGeometriqueBase &);
 

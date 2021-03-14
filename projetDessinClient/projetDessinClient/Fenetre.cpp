@@ -28,3 +28,9 @@ int Fenetre::Detruire(VisitorDessin * v)
 	}
 	else return 1;
 }
+
+ostream & operator<<(ostream & os, const Fenetre &f)
+{
+	return os << f.getNomFen() << " [num: " << f.getNumFen()
+		<< ", " << f.getHeight() << "/" << f.getHeight() << "]";
+}

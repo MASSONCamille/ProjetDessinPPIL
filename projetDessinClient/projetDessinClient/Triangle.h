@@ -49,13 +49,16 @@ public:
 
 
 	virtual int Dessiner(const Fenetre *, const VisitorDessin *) const;
-	int Traslation();
+	int Traslation(const Vecteur2D);
 	int Homothetie();
-	int Rotation();
+	int Rotation(const Vecteur2D, int);
 
 	const Triangle & operator = (const Triangle &);
 
+	friend ostream& operator<<(ostream&, const Triangle&);
 };
+
+extern ostream& operator<<(ostream&, const Triangle&);
 
 
 

@@ -6,17 +6,17 @@ int Cercle::Dessiner(const Fenetre * f, const VisitorDessin * v) const
 {
 	return v->Dessiner(f, this);
 }
-int Cercle::Traslation()
+int Cercle::Traslation(const Vecteur2D v)
 {
-	return 0;
+	return FormeGeometriqueSimple::Traslation(v);
 }
 int Cercle::Homothetie()
 {
 	return 0;
 }
-int Cercle::Rotation()
+int Cercle::Rotation(const Vecteur2D v, int angle)
 {
-	return 0;
+	return FormeGeometriqueSimple::Rotation(v, angle);
 }
 
 const Cercle & Cercle::operator=(const Cercle & c)
@@ -24,7 +24,13 @@ const Cercle & Cercle::operator=(const Cercle & c)
 	if (this != &c) {
 		this->setColor(c.getColor());
 		this->_vecteurOrigine = c._vecteurOrigine;
-		this->_rayon = this->_rayon;
+		this->_rayon = c._rayon;
 	}
 	return *this;
+}
+
+ostream & operator<<(ostream &os, const Cercle &c)
+{
+	FormeGeometriqueSimple var = c;
+	return os << "Cercle [" << var << ", rayon: " << c._rayon << "]";
 }
