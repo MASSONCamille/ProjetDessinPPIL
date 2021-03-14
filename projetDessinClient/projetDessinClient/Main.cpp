@@ -29,8 +29,10 @@ int main() {
 
 	//------------------------------------------------//
 	//--- TEST TO_STRING ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST TO_STRING ---" << endl << endl;
 
-	/*cout << *cercle1 << endl;
+	cout << *cercle1 << endl;
 	cout << cercle1->to_string() << endl;
 
 	cout << *croix1 << endl;
@@ -43,24 +45,36 @@ int main() {
 	cout << polygone1->to_string() << endl;
 
 	cout << *triangle1 << endl;
-	cout << triangle1->to_string() << endl;*/
+	cout << triangle1->to_string() << endl;
+
+	cout << endl << endl;
 
 
 	//------------------------------------------------//
 	//--- TEST SAUVEGARDE ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST SAUVEGARDE ---" << endl << endl;
 
 	VisitorSauvg * saveTxt;
 	saveTxt = new SauvgTxt();
 
 	cout << "test sauvegarde cercle" << endl;
 	if(cercle1->Save(saveTxt))
-		cout << "erreur save cercle";
+		cout << "erreur save cercle" << endl;
+
+	cout << "test sauvegarde polygone" << endl;
+	if (polygone1->Save(saveTxt))
+		cout << "erreur save polygone" << endl;
+
+	cout << endl << endl;
 
 
 	//------------------------------------------------//
 	//--- TEST CHARGER ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST CHARGER ---" << endl << endl;
 
-	/*DictionnaireCharger* dico = new DictionnaireCharger();
+	DictionnaireCharger* dico = new DictionnaireCharger();
 
 	Cercle* cercleCharger = (Cercle*)dico->getCharger()->charger("test1.txt", "cercle");
 	cout << *cercleCharger << endl;
@@ -75,13 +89,17 @@ int main() {
 	cout << *segmentCharger << endl;
 
 	Triangle* triangleCharger = (Triangle*)dico->getCharger()->charger("test5.txt", "triangle");
-	cout << *triangleCharger << endl;*/
+	cout << *triangleCharger << endl;
+
+	cout << endl << endl;
 
 
 	//------------------------------------------------//
 	//--- TEST CONSOLE ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST CONSOLE ---" << endl << endl;
 
-	/*cout << *f1 << endl;
+	cout << *f1 << endl;
 	cout << *croix1 << endl;
 	cout << *cercle1 << endl;
 	cout << *segment1 << endl;
@@ -90,6 +108,7 @@ int main() {
 	cout << *formcomp1 << endl;
 	cout << endl;
 
+
 	cout << *formcomp1 << endl;
 	formcomp1->Traslation(Vecteur2D(100, 100));
 	cout << *formcomp1 << endl;
@@ -97,63 +116,91 @@ int main() {
 	cout << *formcomp1 << endl;
 
 
-	cout << endl << endl;*/
+	cout << endl << endl;
+
+
+	//------------------------------------------------//
+	//--- TEST TRANSLATION ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST TRANSLATION ---" << endl << endl;
+
+	cout << *formcomp1 << endl;
+	cout << "translation -> de vecteur: 100|100" << endl;
+	formcomp1->Traslation(Vecteur2D(100, 100));
+	cout << *formcomp1 << endl;
+
+	cout << endl << endl;
+
+
+	//------------------------------------------------//
+	//--- TEST ROTATION ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST ROTATION ---" << endl << endl;
+
+	cout << *formcomp1 << endl;
+	cout << "rotation -> 90 degre a partir du point 200|200" << endl;
+	formcomp1->Rotation(Vecteur2D(200, 200), 90);
+	cout << *formcomp1 << endl;
+
+	cout << endl << endl;
 
 
 	//------------------------------------------------//
 	//--- TEST SERVEUR ---//
+	cout << "------------------------------------------------" << endl;
+	cout << "--- TEST SERVEUR ---" << endl << endl;
 
 	// Fenetre
-	//if (f1->Afficher(ServJava))
-	//	cout << "fenetre deja dessiner" << endl << endl;
-	//// Test anti-double
-	//if (f1->Afficher(ServJava))
-	//	cout << "fenetre deja dessiner" << endl << endl;
+	if (f1->Afficher(ServJava))
+		cout << "fenetre deja dessiner" << endl << endl;
+	// Test anti-double
+	if (f1->Afficher(ServJava))
+		cout << "fenetre deja dessiner" << endl << endl;
 
-	//// croix
-	//if (croix1->Dessiner(f1, ServJava))
-	//	cout << "erreur croix" << endl << endl;
-	//int x;
-	//cin >> x; //tempo
+	// croix
+	if (croix1->Dessiner(f1, ServJava))
+		cout << "erreur croix" << endl << endl;
+	int x;
+	cin >> x; //tempo
 
-	//// effacer
-	//if (f1->Effacer(ServJava))
-	//	cout << "erreur effacer" << endl << endl;
-	//cin >> x; //tempo
+	// effacer
+	if (f1->Effacer(ServJava))
+		cout << "erreur effacer" << endl << endl;
+	cin >> x; //tempo
 
-	//// cercle
-	//if (cercle1->Dessiner(f1, ServJava))
-	//	cout << "erreur cercle" << endl << endl;
-	//cin >> x; //tempo
+	// cercle
+	if (cercle1->Dessiner(f1, ServJava))
+		cout << "erreur cercle" << endl << endl;
+	cin >> x; //tempo
 
-	//// segment
-	//if (segment1->Dessiner(f1, ServJava))
-	//	cout << "erreur segment" << endl << endl;
-	//cin >> x; //tempo
+	// segment
+	if (segment1->Dessiner(f1, ServJava))
+		cout << "erreur segment" << endl << endl;
+	cin >> x; //tempo
 
-	//// triangle
-	//if (triangle1->Dessiner(f1, ServJava))
-	//	cout << "erreur triangle" << endl << endl;
-	//cin >> x; //tempo
+	// triangle
+	if (triangle1->Dessiner(f1, ServJava))
+		cout << "erreur triangle" << endl << endl;
+	cin >> x; //tempo
 
-	//// polygone
-	//if (polygone1->Dessiner(f1, ServJava))
-	//	cout << "erreur polygone" << endl << endl;
-	//cin >> x; //tempo
+	// polygone
+	if (polygone1->Dessiner(f1, ServJava))
+		cout << "erreur polygone" << endl << endl;
+	cin >> x; //tempo
 
 	// FormeGeometriqueCompose
-	//if (formcomp1->Dessiner(f1, ServJava))
-	//	cout << "erreur forme compose" << endl << endl;
-	//cin >> x; //tempo
+	if (formcomp1->Dessiner(f1, ServJava))
+		cout << "erreur forme compose" << endl << endl;
+	cin >> x; //tempo
 
-	//formcomp1->Rotation(Vecteur2D(200, 200), 50);
+	formcomp1->Rotation(Vecteur2D(200, 200), 50);
 
-	//if (formcomp1->Dessiner(f1, ServJava))
-	//	cout << "erreur forme compose" << endl << endl;
-	//cin >> x; //tempo
+	if (formcomp1->Dessiner(f1, ServJava))
+		cout << "erreur forme compose" << endl << endl;
+	cin >> x; //tempo
 
-	//// fermer client
-	//f1->Detruire(ServJava);
+	// fermer client
+	f1->Detruire(ServJava);
 
-	//Client::getInstance()->fermerClient();
+	Client::getInstance()->fermerClient();
 }
