@@ -5,7 +5,7 @@
 #include "ChargerSegmentTxt.h"
 #include "ChargerTriangleTxt.h"
 
-DictionnaireCharger::DictionnaireCharger() {
+DictionnaireCharger::DictionnaireCharger() { //Permet de construire la chaîne
 
 	ChargerCOR* chargerCercleTxt = new ChargerCercleTxt(nullptr);
 	ChargerCOR* chargerCroixTxt = new ChargerCroixTxt(chargerCercleTxt);
@@ -17,6 +17,6 @@ DictionnaireCharger::DictionnaireCharger() {
 }
 
 
-const ChargerCOR* DictionnaireCharger::getCharger() const {
+const ChargerCOR* DictionnaireCharger::getCharger() const { //Permet d'obtenir le début de la chaîne
 	return _chargerDebut;
 }

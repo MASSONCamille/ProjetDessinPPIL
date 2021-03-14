@@ -3,11 +3,12 @@ package stockage;
 import java.awt.Color;
 import java.util.HashMap;
 
-public final class ColorFactory {
+public final class ColorFactory { // Color factory (singleton) permettant de récupérer les couleurs et de les
+									// utiliser
 
 	private static ColorFactory instance = null;
 
-	public HashMap<String, Color> listColor;
+	public HashMap<String, Color> listColor; // Liste des couleurs
 
 	private ColorFactory() {
 		this.listColor = new HashMap<String, Color>();
@@ -34,7 +35,7 @@ public final class ColorFactory {
 		this.listColor = listColor;
 	}
 
-	public Color getColor(String key) {
+	public Color getColor(String key) { // Fonction de récupération d'une couleur
 		return this.listColor.get(key);
 	}
 

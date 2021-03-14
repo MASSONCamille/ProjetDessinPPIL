@@ -1,0 +1,87 @@
+\hypertarget{class_forme_geometrique_base}{}\doxysection{Forme\+Geometrique\+Base Class Reference}
+\label{class_forme_geometrique_base}\index{FormeGeometriqueBase@{FormeGeometriqueBase}}
+Inheritance diagram for Forme\+Geometrique\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.887640cm]{class_forme_geometrique_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_aafafbcaa25e846a5099588465c558d16}\label{class_forme_geometrique_base_aafafbcaa25e846a5099588465c558d16}} 
+enum {\bfseries Couleurs} \{ \newline
+{\bfseries BLACK} = 0
+, {\bfseries BLUE} = 1
+, {\bfseries RED} = 2
+, {\bfseries GREEN} = 3
+, \newline
+{\bfseries YELLOW} = 4
+, {\bfseries CYAN} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_ab8e8cd6603e5fcff34836b6914da51af}\label{class_forme_geometrique_base_ab8e8cd6603e5fcff34836b6914da51af}} 
+{\bfseries Forme\+Geometrique\+Base} (const Couleurs c)
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_a6ec5cf9eddbee65a01cb913caf548e6a}\label{class_forme_geometrique_base_a6ec5cf9eddbee65a01cb913caf548e6a}} 
+Couleurs {\bfseries get\+Color} () const
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_a71a8e8a91efe8b1620d940d24dbe8bff}\label{class_forme_geometrique_base_a71a8e8a91efe8b1620d940d24dbe8bff}} 
+void {\bfseries set\+Color} (const Couleurs c)
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_a3ec2cf9da46443c7088146a916da6bda}\label{class_forme_geometrique_base_a3ec2cf9da46443c7088146a916da6bda}} 
+virtual int {\bfseries Dessiner} (const \mbox{\hyperlink{class_fenetre}{Fenetre}} $\ast$, const \mbox{\hyperlink{class_visitor_dessin}{Visitor\+Dessin}} $\ast$) const
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_ab050e8ef61aa28421e6b4b3b9788f5d1}\label{class_forme_geometrique_base_ab050e8ef61aa28421e6b4b3b9788f5d1}} 
+virtual int {\bfseries Traslation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}})
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_ac4b0621f1621ce20627934fdf035201a}\label{class_forme_geometrique_base_ac4b0621f1621ce20627934fdf035201a}} 
+virtual int {\bfseries Homothetie} ()
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_a202c6e837e66f66f8ba2c8fe4d5637d5}\label{class_forme_geometrique_base_a202c6e837e66f66f8ba2c8fe4d5637d5}} 
+virtual int {\bfseries Rotation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}, int)
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_af8469d26001a7084ca462fddc9e72a80}\label{class_forme_geometrique_base_af8469d26001a7084ca462fddc9e72a80}} 
+const string {\bfseries to\+\_\+string} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bfseries couleurs\+\_\+str} \mbox{[}6\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_forme_geometrique_base_a67cde10dca8ce78f9f61a629a90da9b4}\label{class_forme_geometrique_base_a67cde10dca8ce78f9f61a629a90da9b4}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&, const \mbox{\hyperlink{class_forme_geometrique_base}{Forme\+Geometrique\+Base}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_forme_geometrique_base_a3f8a856c79a843c191709411fdf62eb9}\label{class_forme_geometrique_base_a3f8a856c79a843c191709411fdf62eb9}} 
+\index{FormeGeometriqueBase@{FormeGeometriqueBase}!couleurs\_str@{couleurs\_str}}
+\index{couleurs\_str@{couleurs\_str}!FormeGeometriqueBase@{FormeGeometriqueBase}}
+\doxysubsubsection{\texorpdfstring{couleurs\_str}{couleurs\_str}}
+{\footnotesize\ttfamily const char $\ast$ Forme\+Geometrique\+Base\+::couleurs\+\_\+str\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{     \textcolor{stringliteral}{"{}Black"{}},}
+\DoxyCodeLine{     \textcolor{stringliteral}{"{}Blue"{}},}
+\DoxyCodeLine{     \textcolor{stringliteral}{"{}Red"{}},}
+\DoxyCodeLine{     \textcolor{stringliteral}{"{}Green"{}},}
+\DoxyCodeLine{     \textcolor{stringliteral}{"{}Yellow"{}},}
+\DoxyCodeLine{     \textcolor{stringliteral}{"{}Cyan"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Forme\+Geometrique\+Base.\+h\item 
+Forme\+Geometrique\+Base.\+cpp\end{DoxyCompactItemize}

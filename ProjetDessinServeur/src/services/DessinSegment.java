@@ -7,18 +7,21 @@ import java.awt.image.BufferStrategy;
 import stockage.ColorFactory;
 import stockage.FrameFactory;
 
-public class DessinSegment extends RequeteCOR {
+public class DessinSegment extends RequeteCOR { // Class de requête permettant de dessiner un segment si l'instruction
+												// correspond
 
 	public DessinSegment(RequeteCOR requeteCORsuivant) {
 		super(requeteCORsuivant);
 	}
 
 	@Override
-	protected boolean actionHandlerBis(String instruction, int noConnexion) {
+	protected boolean actionHandlerBis(String instruction, int noConnexion) { // Vérifie l'instruction et le nombre de
+																				// paramètres
 		String[] donnees = instruction.split("/");
 		if (donnees[0].equals("segment") && donnees.length == 7) {
-			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]);
+			Frame fen = FrameFactory.getInstance().getFrame(noConnexion, donnees[1]); // Récupération de la frame
 
+			// Récupération du buffer strategy et d'un graphics pour dessiner sur la frame
 			BufferStrategy strategie = fen.getBufferStrategy();
 			Graphics graphics = strategie.getDrawGraphics();
 
@@ -29,10 +32,10 @@ public class DessinSegment extends RequeteCOR {
 			int x2 = Integer.parseInt(donnees[5]);
 			int y2 = Integer.parseInt(donnees[6]);
 
+			// Création de la ligne du segment
 			graphics.drawLine(x1, y1, x2, y2);
 
 			strategie.show();
-
 			graphics.dispose();
 
 			return true;

@@ -28,8 +28,8 @@ FormeGeometriqueBase* ChargerPolygoneTxt::charger1(string nomFichier, string for
                 i = 0;
                 double x, y;
                 vector<Vecteur2D> lstvec;
-                while ((pos = ligne.find(delimiter)) != string::npos && i < nbp*2) {
-                    if (i % 2 == 0)
+                while ((pos = ligne.find(delimiter)) != string::npos && i < nbp*2) { //Récupère les couples de vecteur en fonction du nombre de points
+                    if (i % 2 == 0) //Vérifie si le nombre est pair
                         x = stod(ligne.substr(0, pos));
                     else {
                         y = stod(ligne.substr(0, pos));

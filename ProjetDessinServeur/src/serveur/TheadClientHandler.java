@@ -9,7 +9,7 @@ import java.net.Socket;
 import services.DictionnaireRequete;
 import stockage.FrameFactory;
 
-public class TheadClientHandler extends Thread {
+public class TheadClientHandler extends Thread { // Class dédié au client qui reçoit ses instructions
 	Socket socket;
 	int noConnexion;
 
@@ -27,16 +27,19 @@ public class TheadClientHandler extends Thread {
 
 	public void run() {
 		String instruction;
+		DictionnaireRequete dicoRequete = new DictionnaireRequete(); // Création du dictionnaire des requêtes pour ce
+																		// thread
 
 		try {
-			while (!isInterrupted()) {
+			while (!isInterrupted()) { // Boucle qui attend les instructions du client tant que la connexion n'est pas
+										// interrompue
 				instruction = fluxEntrant.readLine();
 				if (instruction != null) {
 					instruction = instruction.toLowerCase().trim();
 					System.out.println("Le client n° " + this.noConnexion + " a envoyé : ");
 					System.out.println(instruction);
-					DictionnaireRequete dicoRequete = new DictionnaireRequete();
 					boolean resRequete = dicoRequete.getRequeteDebut().actionHandler(instruction, noConnexion);
+					// Utilisation du dictionnaire des requêtes
 					if (resRequete)
 						System.out.println("Instruction terminé");
 					else
@@ -49,7 +52,8 @@ public class TheadClientHandler extends Thread {
 			System.err.println("Impossible de lire le Socket");
 		}
 
-		FrameFactory.getInstance().emptyAllFramesClient(noConnexion);
+		FrameFactory.getInstance().emptyAllFramesClient(noConnexion); // Ferme les fenêtres du client si ce n'est pas
+																		// fait
 		System.out.println("Le client n° " + this.noConnexion + " a terminé sa session.");
 
 	}
