@@ -41,6 +41,8 @@ public:
 	int Homothetie();
 	int Rotation(const Vecteur2D, int);
 
+	virtual int Save(const VisitorSauvg *) const;
+
 	const Segment & operator = (const Segment &);
 
 	friend ostream& operator<<(ostream&, const Segment&);

@@ -3,8 +3,8 @@
 #include "Fenetre.h"
 #include "Vecteur2D.h"
 
-
 class VisitorDessin;
+class VisitorSauvg;
 
 class FormeGeometriqueBase
 {
@@ -44,6 +44,8 @@ public:
 	virtual int Traslation(const Vecteur2D);
 	virtual int Homothetie();
 	virtual int Rotation(const Vecteur2D, int);
+
+	virtual int Save(const VisitorSauvg *) const { return 0; };
 
 	friend ostream& operator<<(ostream&, const FormeGeometriqueBase&);
 

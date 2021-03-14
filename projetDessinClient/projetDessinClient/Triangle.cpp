@@ -1,5 +1,6 @@
 #include "Triangle.h"
 #include "VisitorDessin.h"
+#include "VisitorSauvg.h"
 
 
 int Triangle::Dessiner(const Fenetre * f, const VisitorDessin * v) const
@@ -23,6 +24,11 @@ int Triangle::Rotation(const Vecteur2D vr, int angle)
 	this->_p3 = (vo - vr + this->_p3).rota(angle) + vr - this->_vecteurOrigine;
 
 	return 0;
+}
+
+int Triangle::Save(const VisitorSauvg *v) const
+{
+	return v->Sauvgarde(this);
 }
 
 const Triangle & Triangle::operator=(const Triangle & t)

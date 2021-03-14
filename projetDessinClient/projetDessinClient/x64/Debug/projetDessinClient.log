@@ -1,4 +1,8 @@
 ﻿  Main.cpp
+e:\cours\l3\s2\ppil\projetdessinppil\projetdessinclient\projetdessinclient\polygone.h(45): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
 e:\cours\l3\s2\ppil\projetdessinppil\projetdessinclient\projetdessinclient\formegeometriquecompose.h(46): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
-e:\cours\l3\s2\ppil\projetdessinppil\projetdessinclient\projetdessinclient\main.cpp(16): warning C4267: 'argument' : conversion de 'size_t' en 'const int', perte possible de données
+e:\cours\l3\s2\ppil\projetdessinppil\projetdessinclient\projetdessinclient\main.cpp(17): warning C4267: 'argument' : conversion de 'size_t' en 'const int', perte possible de données
+  SauvgTxt.cpp
+e:\cours\l3\s2\ppil\projetdessinppil\projetdessinclient\projetdessinclient\polygone.h(45): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
+  Génération de code en cours...
   projetDessinClient.vcxproj -> E:\cours\L3\S2\PPIL\ProjetDessinPPIL\projetDessinClient\x64\Debug\projetDessinClient.exe

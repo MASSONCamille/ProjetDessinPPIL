@@ -40,6 +40,12 @@
     <Filter Include="Fichiers sources\Charger">
       <UniqueIdentifier>{57cf375c-a228-421a-87b5-fca48f12cf09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\VisitorSauvg">
+      <UniqueIdentifier>{0d2b32e0-4214-4d34-bac8-8dbb7712ebad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\VisitorSauvg">
+      <UniqueIdentifier>{76946837-c9c9-48ad-8fa2-819d3ad55eb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VisitorDessin.cpp">
@@ -108,6 +114,12 @@
     <ClCompile Include="FormeGeometriqueCompose.cpp">
       <Filter>Fichiers sources\FormeGeometrique</Filter>
     </ClCompile>
+    <ClCompile Include="VisitorSauvg.cpp">
+      <Filter>Fichiers sources\VisitorSauvg</Filter>
+    </ClCompile>
+    <ClCompile Include="SauvgTxt.cpp">
+      <Filter>Fichiers sources\VisitorSauvg</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VisitorDessin.h">
@@ -175,6 +187,12 @@
     </ClInclude>
     <ClInclude Include="FormeGeometriqueCompose.h">
       <Filter>Fichiers d%27en-tête\FormeGeometrique</Filter>
+    </ClInclude>
+    <ClInclude Include="VisitorSauvg.h">
+      <Filter>Fichiers d%27en-tête\VisitorSauvg</Filter>
+    </ClInclude>
+    <ClInclude Include="SauvgTxt.h">
+      <Filter>Fichiers d%27en-tête\VisitorSauvg</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

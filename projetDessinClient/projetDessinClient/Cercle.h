@@ -40,6 +40,8 @@ public:
 	int Homothetie();
 	int Rotation(const Vecteur2D, int);
 
+	virtual int Save(const VisitorSauvg *) const;
+
 	const Cercle & operator = (const Cercle &);
 
 	friend ostream& operator<<(ostream&, const Cercle&);

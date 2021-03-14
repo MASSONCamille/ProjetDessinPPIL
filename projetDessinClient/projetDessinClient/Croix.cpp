@@ -1,5 +1,6 @@
 #include "Croix.h"
 #include "VisitorDessin.h"
+#include "VisitorSauvg.h"
 
 
 int Croix::Dessiner(const Fenetre * f, const VisitorDessin * v) const
@@ -24,6 +25,11 @@ int Croix::Rotation(const Vecteur2D vr, int angle)
 		+ vr - this->_vecteurOrigine;
 
 	return 0;
+}
+
+int Croix::Save(const VisitorSauvg *v) const
+{
+	return v->Sauvgarde(this);
 }
 
 const Croix & Croix::operator=(const Croix & c)

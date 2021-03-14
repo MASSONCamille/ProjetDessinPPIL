@@ -1,5 +1,6 @@
 #include "Segment.h"
 #include "VisitorDessin.h"
+#include "VisitorSauvg.h"
 
 
 int Segment::Dessiner(const Fenetre * f, const VisitorDessin * v) const
@@ -24,6 +25,11 @@ int Segment::Rotation(const Vecteur2D vr, int angle)
 		+ vr - this->_vecteurOrigine;
 
 	return 0;
+}
+
+int Segment::Save(const VisitorSauvg *v) const
+{
+	return v->Sauvgarde(this);
 }
 
 const Segment & Segment::operator=(const Segment & s)

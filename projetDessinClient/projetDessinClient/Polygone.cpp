@@ -1,5 +1,6 @@
 #include "Polygone.h"
 #include "VisitorDessin.h"
+#include "VisitorSauvg.h"
 
 
 int Polygone::Dessiner(const Fenetre * f, const VisitorDessin * v) const
@@ -27,6 +28,11 @@ int Polygone::Rotation(const Vecteur2D vr, int angle)
 	}
 
 	return 0;
+}
+
+int Polygone::Save(const VisitorSauvg *v) const
+{
+	return v->Sauvgarde(this);
 }
 
 const Polygone & Polygone::operator=(const Polygone & p)

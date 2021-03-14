@@ -14,7 +14,7 @@ public:
 	inline Polygone()
 		: FormeGeometriqueSimple()
 	{
-		this->_nbPoint = 0;
+		this->_nbPoint = 1;
 		this->_listPoint = vector<Vecteur2D>();
 	}
 	inline Polygone(const Polygone & p)
@@ -36,16 +36,13 @@ public:
 	{
 		return this->_nbPoint;
 	}
-	inline void setNbPoint(int nbp)
-	{
-		this->_nbPoint = nbp;
-	}
 	inline vector<Vecteur2D> getListPoint() const
 	{
 		return this->_listPoint;
 	}
 	inline void setListPoint(vector<Vecteur2D> lp)
 	{
+		this->_nbPoint = lp.size();
 		this->_listPoint = lp;
 	}
 
@@ -54,6 +51,8 @@ public:
 	int Traslation(const Vecteur2D);
 	int Homothetie();
 	int Rotation(const Vecteur2D, int);
+
+	virtual int Save(const VisitorSauvg *) const;
 
 	const Polygone & operator = (const Polygone &);
 

@@ -34,6 +34,8 @@ public:
 	virtual int Homothetie();
 	virtual int Rotation(const Vecteur2D, int);
 
+	virtual int Save(const VisitorSauvg *) const { return 0; };
+
 	friend ostream& operator<<(ostream&, const FormeGeometriqueSimple&);
 
 	virtual const string to_string() const;

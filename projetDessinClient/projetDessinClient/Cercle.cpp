@@ -1,5 +1,6 @@
 #include "Cercle.h"
 #include "VisitorDessin.h"
+#include "VisitorSauvg.h"
 
 
 int Cercle::Dessiner(const Fenetre * f, const VisitorDessin * v) const
@@ -17,6 +18,11 @@ int Cercle::Homothetie()
 int Cercle::Rotation(const Vecteur2D v, int angle)
 {
 	return FormeGeometriqueSimple::Rotation(v, angle);
+}
+
+int Cercle::Save(const VisitorSauvg *v) const
+{
+	return v->Sauvgarde(this);
 }
 
 const Cercle & Cercle::operator=(const Cercle & c)

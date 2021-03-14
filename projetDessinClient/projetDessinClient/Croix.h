@@ -1,6 +1,7 @@
 #pragma once
 #include "FormeGeometriqueSimple.h"
 
+
 class Croix : public FormeGeometriqueSimple
 {
 private:
@@ -38,6 +39,8 @@ public:
 	int Traslation(const Vecteur2D);
 	int Homothetie();
 	int Rotation(const Vecteur2D, int);
+
+	virtual int Save(const VisitorSauvg *) const;
 
 	const Croix & operator = (const Croix &);
 

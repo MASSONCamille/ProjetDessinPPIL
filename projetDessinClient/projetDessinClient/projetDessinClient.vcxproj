@@ -37,10 +37,12 @@
     <ClCompile Include="FormeGeometriqueSimple.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Polygone.cpp" />
+    <ClCompile Include="SauvgTxt.cpp" />
     <ClCompile Include="Segment.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
     <ClCompile Include="VisitorDessin.cpp" />
+    <ClCompile Include="VisitorSauvg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
@@ -61,10 +63,12 @@
     <ClInclude Include="FormeGeometriqueCompose.h" />
     <ClInclude Include="FormeGeometriqueSimple.h" />
     <ClInclude Include="Polygone.h" />
+    <ClInclude Include="SauvgTxt.h" />
     <ClInclude Include="Segment.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
     <ClInclude Include="VisitorDessin.h" />
+    <ClInclude Include="VisitorSauvg.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

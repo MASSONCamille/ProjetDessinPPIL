@@ -1,4 +1,5 @@
 #include "DessinServJava.h"
+#include "SauvgTxt.h"
 #include "DictionnaireCharger.h"
 
 
@@ -43,6 +44,17 @@ int main() {
 
 	cout << *triangle1 << endl;
 	cout << triangle1->to_string() << endl;*/
+
+
+	//------------------------------------------------//
+	//--- TEST SAUVEGARDE ---//
+
+	VisitorSauvg * saveTxt;
+	saveTxt = new SauvgTxt();
+
+	cout << "test sauvegarde cercle" << endl;
+	if(cercle1->Save(saveTxt))
+		cout << "erreur save cercle";
 
 
 	//------------------------------------------------//
@@ -92,8 +104,8 @@ int main() {
 	//--- TEST SERVEUR ---//
 
 	// Fenetre
-	if (f1->Afficher(ServJava))
-		cout << "fenetre deja dessiner" << endl << endl;
+	//if (f1->Afficher(ServJava))
+	//	cout << "fenetre deja dessiner" << endl << endl;
 	//// Test anti-double
 	//if (f1->Afficher(ServJava))
 	//	cout << "fenetre deja dessiner" << endl << endl;
@@ -101,7 +113,7 @@ int main() {
 	//// croix
 	//if (croix1->Dessiner(f1, ServJava))
 	//	cout << "erreur croix" << endl << endl;
-	int x;
+	//int x;
 	//cin >> x; //tempo
 
 	//// effacer
@@ -130,15 +142,15 @@ int main() {
 	//cin >> x; //tempo
 
 	// FormeGeometriqueCompose
-	if (formcomp1->Dessiner(f1, ServJava))
-		cout << "erreur forme compose" << endl << endl;
-	cin >> x; //tempo
+	//if (formcomp1->Dessiner(f1, ServJava))
+	//	cout << "erreur forme compose" << endl << endl;
+	//cin >> x; //tempo
 
-	formcomp1->Rotation(Vecteur2D(200, 200), 50);
+	//formcomp1->Rotation(Vecteur2D(200, 200), 50);
 
-	if (formcomp1->Dessiner(f1, ServJava))
-		cout << "erreur forme compose" << endl << endl;
-	cin >> x; //tempo
+	//if (formcomp1->Dessiner(f1, ServJava))
+	//	cout << "erreur forme compose" << endl << endl;
+	//cin >> x; //tempo
 
 	//// fermer client
 	//f1->Detruire(ServJava);

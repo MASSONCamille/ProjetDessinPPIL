@@ -53,6 +53,8 @@ public:
 	int Homothetie();
 	int Rotation(const Vecteur2D, int);
 
+	virtual int Save(const VisitorSauvg *) const;
+
 	const Triangle & operator = (const Triangle &);
 
 	friend ostream& operator<<(ostream&, const Triangle&);
