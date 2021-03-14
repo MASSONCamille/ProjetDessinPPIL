@@ -4,8 +4,9 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServeurBase {
-	public static void main(String[] args) throws Exception {
+public class ServeurBase { // Class du serveur de base. Permets de lancer le serveur et de recevoir des
+							// clients en les redirigeant vers des threads dédiés
+	public static void main(String[] args) throws Exception { // Basé sur le prototype vu en cours
 		ServerSocket serveur;
 		serveur = new ServerSocket(9111);
 
@@ -24,7 +25,7 @@ public class ServeurBase {
 
 		groupe = new ThreadGroup("socketsClients");
 		int noConnexion = 0;
-		while (true) {
+		while (true) { // Boucle infinie en attente de clients
 			Socket nouveauClientSocket;
 			TheadClientHandler nouveauClientThread;
 
@@ -33,7 +34,7 @@ public class ServeurBase {
 			System.out.println("Connexion réussie n° " + noConnexion);
 
 			nouveauClientThread = new TheadClientHandler(nouveauClientSocket, groupe, noConnexion);
-			nouveauClientThread.start();
+			nouveauClientThread.start(); // Lance un thread dédié au client
 		}
 	}
 

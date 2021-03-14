@@ -2,10 +2,11 @@ package stockage;
 
 import java.awt.Frame;
 
-public class InfoFrame {
-	int noConnexion;
-	String noFrame;
-	Frame fen;
+public class InfoFrame { // Class qui structure les données d'une frame pour les ranger dans la frame
+							// factory
+	private int noConnexion; // Numéro de connexion du client
+	private String noFrame; // Numéro de la frame
+	private Frame fen; // La frame
 
 	public InfoFrame() {
 		this.noConnexion = -1;

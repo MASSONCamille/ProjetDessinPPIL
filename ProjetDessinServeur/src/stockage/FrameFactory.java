@@ -3,11 +3,12 @@ package stockage;
 import java.awt.Frame;
 import java.util.ArrayList;
 
-public final class FrameFactory {
+public final class FrameFactory { // Frame factory (singleton) permettant de récupérer les frames et de les
+	// utiliser en fonction du client
 
 	private static FrameFactory instance = null;
 
-	public ArrayList<InfoFrame> listFrame = new ArrayList<InfoFrame>();
+	public ArrayList<InfoFrame> listFrame = new ArrayList<InfoFrame>(); // Liste des frames
 
 	private FrameFactory() {
 	}
@@ -23,11 +24,13 @@ public final class FrameFactory {
 		return listFrame;
 	}
 
-	public Frame getFrame(int noConnexion, String noFrame) {
+	public Frame getFrame(int noConnexion, String noFrame) { // Permets de récupérer directement une frame en fonction
+																// du
+																// client et du numéro de celle-ci
 		boolean trouve = false;
 		int i = 0;
 		int taille = listFrame.size();
-		InfoFrame infoFrameVerif = new InfoFrame();
+		InfoFrame infoFrameVerif = new InfoFrame(); // InfoFrame de comparaison
 
 		while (!trouve && i < taille) {
 			infoFrameVerif = listFrame.get(i);
@@ -43,7 +46,7 @@ public final class FrameFactory {
 			return new InfoFrame().getFen();
 	}
 
-	public void fermerFrame(int noConnexion, String noFrame) {
+	public void fermerFrame(int noConnexion, String noFrame) { // Permets de fermer et d'enlever la frame de la liste
 		int i = 0;
 		boolean trouve = false;
 		InfoFrame temp = null;
@@ -61,7 +64,7 @@ public final class FrameFactory {
 		}
 	}
 
-	public void emptyAllFramesClient(int noConnexion) {
+	public void emptyAllFramesClient(int noConnexion) { // Permets de fermer et de retirer toutes les frames d'un client
 		ArrayList<InfoFrame> collecSuppr = new ArrayList<InfoFrame>();
 
 		listFrame.forEach((n) -> {
