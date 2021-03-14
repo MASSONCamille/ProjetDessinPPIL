@@ -1,4 +1,5 @@
 #include "DessinServJava.h"
+#include "DictionnaireCharger.h"
 
 
 int main() {
@@ -62,5 +63,6 @@ int main() {
 	// fermer client
 	f1->Detruire(ServJava);
 	Client::getInstance()->fermerClient();
+
 	exit(0);
 }
